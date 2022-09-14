@@ -371,7 +371,7 @@ template {
 
 /*** inView Animations */ /* inViewport */
 [data=fade-up], [data="fade-up delay"] {
-  transition: all ease 2s;
+  transition: transform ease 2s;
   opacity: 0;
   transform: translateY(5vw);
 }
@@ -1469,7 +1469,7 @@ header {
   background: #fff;
   color: #617575;
   z-index: 100;
-  transition: all ease 1.4s;
+  transition: padding ease 1.4s;
 }
 header.sticky {
   padding: 16px 40px 16px 40px;
