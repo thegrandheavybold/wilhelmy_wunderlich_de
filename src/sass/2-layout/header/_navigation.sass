@@ -1,0 +1,50 @@
+.main-navigation
+	//width: 100%
+	margin-top: 32px
+	display: flex
+	flex-wrap: wrap
+	.menu
+		width: 100vw
+		//height: 100vh
+		//position: fixed
+		//top: 0
+		//left: 0
+		//background: $taupe
+		transition: all ease .7s
+		transition-property: transform, opacity
+		//z-index: -1
+		//overflow-x: scroll
+
+	.menu-toggle[aria-expanded= "false"] + .menu
+		transform: scale(0)
+		opacity: 0
+		visibility: hidden
+
+	.menu-toggle[aria-expanded="true"] + .menu
+		transform: scale(1)
+		opacity: 1
+		visibility: visible
+
+
+	.menu__content
+		//width: 501px
+		display: flex
+		justify-content: center
+
+		ul.menu_items
+			display: flex
+			flex-direction: row
+			justify-content: space-between
+			//width: 100%
+
+			li
+				margin-right: 1rem
+				a
+					text-transform: uppercase
+					color: $blue_gray60
+					//font-size: min(max(4vw), 24px)
+					//line-height: min(max(7vw), 27px)
+					//letter-spacing: -0.2rem
+
+			&:last-of-type
+				margin-right: 0

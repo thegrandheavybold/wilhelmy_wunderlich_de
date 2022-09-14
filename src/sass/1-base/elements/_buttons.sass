@@ -1,0 +1,61 @@
+button
+  cursor: pointer
+  @include font_bold
+  font-size: min(max(3vw), 0.778rem)
+  line-height: min(max(4vw), 1.167rem)
+  transition: all ease .7s
+  box-sizing: border-box
+
+.btn
+  border-radius: 2rem
+  padding: .75rem 1rem
+
+.btn_blue
+  border: 3px solid $blue_gray30
+
+.btn_red
+  border: 3px solid $red_light50
+  background: $red_light50
+  color: $white
+  &:hover
+    border: 3px solid transparent
+    background: $red_gradient border-box
+    color: $white
+  &:active
+    border: 3px solid transparent
+    background: $red_dark
+    color: $white
+
+
+.btn_wht
+  border: 3px solid $white
+  background: $white
+  color: $red_light50
+
+.ww_top
+  width: 64px
+  height: 64px
+  display: block
+
+.ww_phone, .sticky_btn
+  color: $red_light50
+  background: $white
+  &:hover
+    border-color: $blue_gray40
+  &:active
+    border-color: $blue_gray50
+    color: $red_dark
+
+
+.ww_message
+  border: 3px solid $red_light50
+  background: $white
+  color: $red_light50
+  &:hover
+    border: 3px solid transparent
+    background: $red_gradient border-box
+    color: $white
+  &:active
+    border: 3px solid transparent
+    background: $red_dark
+    color: $white

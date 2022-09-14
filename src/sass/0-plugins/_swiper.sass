@@ -1,0 +1,87 @@
+@import '../node_modules/swiper/swiper'
+@import '../node_modules/swiper/modules/autoplay/autoplay'
+@import '../node_modules/swiper/modules/lazy/lazy'
+@import '../node_modules/swiper/modules/pagination/pagination'
+@import '../node_modules/swiper/modules/effect-fade/effect-fade'
+@import '../node_modules/swiper/modules/effect-cards/effect-cards'
+//@import '../node_modules/swiper/modules/navigation/navigation'
+
+//Quotes Slider
+.qts_swiper
+  .swiper-slide
+    display: flex
+    justify-content: center
+
+  .quote_slide
+    width: 60%
+    text-align: center
+
+  .swiper-pagination
+    position: relative
+
+  .swiper-btn-prev, .swiper-btn-next
+    cursor: pointer
+    position: absolute
+    top: 25%
+    z-index: 10
+    display: flex
+    align-items: center
+    justify-content: center
+    svg.next_btn
+      width: 64px
+      height: 64px
+      transition: all ease .7s
+      fill: $blue_gray30
+    svg.next_btn:hover
+      fill: $red_light50
+
+
+  .swiper-btn-prev
+    left: 0
+    right: auto
+
+  .swiper-btn-next
+    left: auto
+    right: 0
+    svg.next_btn
+      transform: rotate(180deg)
+
+.swiper-pagination
+  span.swiper-pagination-bullet
+    width: 16px
+    height: 16px
+    background: $blue_gray30
+    transition: all ease .7s
+    opacity: 1
+
+  span.swiper-pagination-bullet-active
+    background: $red_light50
+
+//Impressions Slider
+.imps_swiper
+
+  .swiper-pagination
+    bottom: 2vw
+
+//Cards Slider
+.crds_swiper
+  width: 410px
+  height: 525px
+
+
+  .swiper-slide
+    background: $white
+    border-radius: 1rem
+    display: flex
+    align-items: center
+    justify-content: center
+    box-shadow: 0px 10px 15px rgba(0, 0, 0, .10)
+
+    .swiper-slide-shadow
+      background: transparent
+      box-shadow: 10px 10px 30px 10px rgb(0 0 0 / 15%)
+      box-sizing: border-box
+      border-radius: 1rem
+
+  .swiper-pagination
+    bottom: 2vw

@@ -1,0 +1,93 @@
+---
+title: Zahnärztinnen & Team
+
+eleventyNavigation:
+  key: Zahnärztinnen & Team
+  parent: Praxis
+  order: 2
+
+layout: "layouts/base.njk"
+---
+
+<section class="fond team">
+
+  <div class="wrapper">
+
+    <div class="item_1">
+
+      <span class="topline" data="fade-up">Das Team</span>
+      <p class="copy_intro" data="fade-up delay">Wir glauben an lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor.</p>
+
+    </div><!-- .item_1 -->
+
+  </div><!-- .wrapper -->
+
+</section>
+
+
+<section class="team_portrait">
+
+  <div class="wrapper">
+
+    <div class="item_1">
+
+      <div class="rnd" data="fade-up">
+        {% picture "Julia-Wilhelmy-Wunderlich.png", "Zahnarztpraxis und Team – Dr. Julia Wilhelmy-Wunderlich"%}
+      </div>
+      <div>
+        <h6 data="fade-up">Dr. Julia Wilhelmy-Wunderlich</h6>
+        <p class="copy" data="fade-up delay">Nulla consequat massa quis enim.  Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu.</p>
+        <button class="btn btn_red" onclick="location.href='/Dr_Julia_Wilhelmy-Wunderlich'" type="button" data="fade-up">Mehr erfahren</button>
+      </div>
+
+    </div><!-- .item_1 -->
+
+    <div class="item_2">
+
+      <div class="rnd" data="fade-up delay">
+        {% picture "Janna_Bruns.png", "Zahnarztpraxis und Team – Dr. Julia Wilhelmy-Wunderlich"%}
+      </div>
+      <div>
+        <h6 data="fade-up">Dr. Janna Bruns</h6>
+        <p class="copy" data="fade-up delay">Nulla consequat massa quis enim.  Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu.</p>
+        <button class="btn btn_red" onclick="location.href='/Dr_Janna_Bruns'" type="button" data="fade-up">Mehr erfahren</button>
+      </div>
+
+    </div><!-- .item_2 -->
+
+  </div><!-- .wrapper -->
+
+</section>
+
+<section class="motivation">
+
+  <div class="wrapper">
+
+    <div class="item_1" data="fade-up">
+      <svg class="ww_flame" alt="Quotation Marks">
+        <use xlink:href="#ww_flame"></use>
+      </svg>
+    </div><!-- .item_1 -->
+
+    <div class="item_2">
+      <h3 data="fade-up">Was uns antreibt</h3>
+      <p class="copy" data="fade-up delay">Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. <br> <br>Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim. </p>
+    </div><!-- .item_2 -->
+
+  </div><!-- .wrapper -->
+
+
+</section>
+
+
+<section class="hero">
+
+  <div class="wrapper">
+    <h3 data="fade-up">Ärztinnen & Behandlerinnen</h3>
+  </div><!-- .wrapper -->
+
+  {% picture "slider_2.png", "Zahnarztpraxis und Team – Dr. Julia Wilhelmy-Wunderlich"%}
+
+</section><!-- .hero -->
+
+{% include "partials/languages.njk" %}

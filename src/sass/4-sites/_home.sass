@@ -1,0 +1,77 @@
+section.intro
+  background: $white
+  @include ptop
+  @include pbottom
+
+  .wrapper.grd
+    grid-template-areas: 'a a a a a a' 'b b b c c c'
+
+
+    .topline
+      grid-area: a
+
+    .copy_intro
+      grid-area: b
+      text-align: left
+
+    .copy
+      grid-area: c
+      padding-left: 5vw
+
+
+section.praxis_teaser
+  background: $white
+  @include pbottom
+
+  .wrapper.grd
+    grid-template-areas: 'a a a a b b' '. c c c c .'
+
+    .item_1
+      grid-area: a
+
+    .item_2
+      grid-area: b
+      align-self: self-end
+      position: relative
+      bottom: -10%
+
+    .item_3
+      grid-area: c
+      @include mtop
+
+
+section.quote, div.quote
+  background: $blue_gray20
+  padding: 8vw 0
+
+  .wrapper
+    display: flex
+    align-items: center
+    flex-direction: column
+
+  svg.ww_quote
+    width: 80px
+    height: 71px
+
+
+section.credo_teaser
+  background: $red_gradient
+  @include ptop
+  @include pbottom
+
+  .wrapper
+    display: flex
+    flex-direction: row
+    justify-content: space-between
+    flex-wrap: wrap
+    text-align: center
+
+    .item_1, .item_2, .item_3
+      width: 20%
+      color: $white
+
+    .item_4, h3
+      width: 100%
+
+      button
+        margin-top: 1vw
