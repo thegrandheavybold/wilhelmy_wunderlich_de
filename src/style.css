@@ -371,9 +371,9 @@ template {
 
 /*** inView Animations */ /* inViewport */
 [data=fade-up], [data="fade-up delay"] {
-  transition: transform ease 2s;
+  transition: transform ease 1s, opacity ease 2s;
   opacity: 0;
-  transform: translateY(5vw);
+  transform: translateY(3vw);
 }
 
 [data=fade-up].is_inview, [data="fade-up delay"].is_inview {
@@ -1768,7 +1768,7 @@ section.fond .wrapper .copy_intro {
 .sticky_badge {
   position: fixed;
   right: -3px;
-  top: 15vw;
+  top: calc(50vh - 97px);
   z-index: 10;
 }
 .sticky_badge::after {
@@ -1802,18 +1802,18 @@ section.fond .wrapper .copy_intro {
   cursor: pointer;
   height: 35px;
 }
-.sticky_badge ul.sticky_icons li:hover + ul.sticky_content li {
+.sticky_badge ul.sticky_icons li span.sticky_content_item {
+  opacity: 0;
+  transition: all ease 0.7s;
+  transform: translateY(20px);
+  visibility: hidden;
+  display: none;
+}
+.sticky_badge ul.sticky_icons li:hover > span.sticky_content_item {
   transform: translateY(0);
   opacity: 1;
   visibility: visible;
-}
-.sticky_badge ul.sticky_content li {
-  transform: translateY(2rem);
-  position: relative;
-  transition: all ease 0.7s;
-  right: 1.5rem;
-  opacity: 0;
-  visibility: hidden;
+  display: block;
 }
 
 /*** hero */

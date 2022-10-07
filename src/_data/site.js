@@ -1,11 +1,10 @@
 module.exports = {
-  url: "https://www.christiankriegsheim.com",
+  url: "https://www.zahnaerzte-in-ratingen.de/",
   baseUrl: "/",
-  name: "Christian Kriegsheim",
+  name: "Wilhelmy-Wunderlich",
   author: "Christian Kriegsheim",
-  authorTwitter: "@CKriegsheim",
   metaImage: "",
   //buildTime: new Date(),
-  metaTitle: "Karies & Baktus",
-  metaDescription: "Karies & Baktus sind zwei Böse"
+  metaTitle: "Wilhelmy-Wunderlich",
+  metaDescription: "Zahnarztpraxis und Team Dr. Julia Wilhelmy-Wunderlich"
 };

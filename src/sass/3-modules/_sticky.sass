@@ -1,7 +1,7 @@
 .sticky_badge
   position: fixed
   right: -3px
-  top: 15vw
+  top: calc(50vh - (194px / 2))
   z-index: 10
   &::after
     content: ""
@@ -33,16 +33,34 @@
       cursor: pointer
       height: 35px
 
-  ul.sticky_icons li:hover + ul.sticky_content li
+      span.sticky_content_item
+        opacity: 0
+        transition: all ease .7s
+        transform: translateY(20px)
+        visibility: hidden
+        display: none
+
+  ul.sticky_icons li:hover > span.sticky_content_item
     transform: translateY(0)
     opacity: 1
     visibility: visible
+    display: block
 
 
-  ul.sticky_content li
-    transform: translateY(2rem)
-    position: relative
-    transition: all ease .7s
-    right: 1.5rem
-    opacity: 0
-    visibility: hidden
+
+  //ul.sticky_content
+    display: flex
+    justify-content: flex-end
+    flex-direction: column
+    flex-wrap: nowrap
+    align-items: flex-end
+    margin-top: -245px
+    margin-right: 40px
+
+    //li
+      transform: translateY(2rem)
+      position: relative
+      transition: all ease .7s
+      right: 1.5rem
+      opacity: 1
+      visibility: visible
