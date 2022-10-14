@@ -6,6 +6,8 @@
 
 //Mobile Menu
 @media only screen and (max-width: 1024px)
+	.menu-button-links
+		height: 0
 	.menu-button-links button, .menu-button-links button:active, .menu-button-links button:focus, .menu-button-links button:visited, .menu-button-links button:focus-visible
 		margin: 0
 		padding: 0
@@ -28,6 +30,10 @@
 		align-items: center
 		text-align: center
 		background: $red_gradient
+		height: 100vh
+		overflow: scroll
+		transform: translateY(50vw)
+		transition: transform ease .7s, opacity ease .7s
 
 	.menu-button-links [role="menuitem"],
 	.menu-button-links [role="separator"]
@@ -50,6 +56,8 @@
 
 	.st_lvl__item
 		margin-bottom: 1rem
+		&:nth-of-type(5)::after
+			display: none
 		&::after
 			content: ''
 			height: 2px
@@ -58,17 +66,23 @@
 			border-radius: 1rem
 			background: $white
 			margin: 2rem auto
+			position: relative
+			top: .5rem
+
 	.nd_lvl__item
-		margin-top: .5rem
-		margin-bottom: .5rem
+		margin-top: 1rem
+		margin-bottom: 1.2rem
+
 	.rd_lvl__item
-		margin-top: .5rem
-		margin-bottom: .25rem
+		margin-top: .75rem
+		margin-bottom: .5rem
 
 	ul.nav
-		//transition: border-top ease .7s
-		li:first-of-type
+		@include pbottom
+		li.st_lvl__item:nth-of-type(1)
 			@include ptop
+		li.st_lvl__item:nth-of-type(5)
+			@include pbottom
 
 	[aria-expanded="true"] + ul.nav
 		margin-top: 24px
@@ -76,16 +90,29 @@
 	header.sticky > .header_bar .menu-button-links [aria-expanded="true"] + ul.nav
 		margin-top: 16px
 
+	ul.service_items li.nd_lvl__item:nth-of-type(2)
+		display: none
+
+	li.meta_informations
+		@include ptop
+		@include pbottom
+		color: $white
+		background: $red_dark
+		width: 100vw
+		text-align: left
+		&::after
+			display: none
+		.meta_informations__item:last-of-type
+			margin-top: 2rem
+
 	[aria-expanded="true"] + [role="menu"]
 		opacity: 1
 		visibility: visible
-		height: 100vh
+		transform: translateY(0)
 
 	[aria-expanded="false"] + [role="menu"]
 		opacity: 0
 		visibility: hidden
-		transform: translateY(5vw)
-		height: 0
 
 //Desktop Menu
 @media only screen and (min-width: 1025px)
@@ -181,6 +208,9 @@
 	.menu-button-links button
 		display: none
 
+	ul.nav li:nth-of-type(5),
+	nav.menu-button-links > ul.nav .meta_informations
+		display: none
 
 //.nxt_lvl:hover > ul.praxis_items, .nxt_lvl:hover > ul.service_items
 	visibility: visible

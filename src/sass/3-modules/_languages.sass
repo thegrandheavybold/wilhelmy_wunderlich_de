@@ -54,3 +54,30 @@ section.languages
         top: -1.5rem
         left: 50%
         transform: translate(-50%, 0)
+
+  @media only screen and (max-width: 1024px)
+    .wrapper
+      flex-wrap: wrap
+      justify-content: space-evenly
+
+      .item_1
+        width: 100%
+
+      .item_2
+        width: 60%
+        ul.flags:first-of-type
+          margin: 2rem 0 1rem 0
+
+  @media only screen and (max-width: 768px)
+    .wrapper
+      flex-wrap: wrap
+      justify-content: space-evenly
+
+      .item_1
+        width: 100%
+        text-align: center
+
+      .item_2
+        width: 100%
+        ul.flags:first-of-type
+          margin: 2.5rem 0 1rem 0

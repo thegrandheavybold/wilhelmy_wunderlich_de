@@ -8,6 +8,7 @@
 
 //Quotes Slider
 .qts_swiper
+  padding-bottom: 1rem
   .swiper-slide
     display: flex
     justify-content: center
@@ -18,6 +19,7 @@
 
   .swiper-pagination
     position: relative
+    top: 1rem
 
   .swiper-btn-prev, .swiper-btn-next
     cursor: pointer
@@ -35,7 +37,6 @@
     svg.next_btn:hover
       fill: $red_light50
 
-
   .swiper-btn-prev
     left: 0
     right: auto
@@ -45,6 +46,12 @@
     right: 0
     svg.next_btn
       transform: rotate(180deg)
+
+  @media only screen and (max-width: 768px)
+    .quote_slide
+      width: 100%
+    .swiper-btn-prev, .swiper-btn-next
+      display: none
 
 .swiper-pagination
   span.swiper-pagination-bullet
@@ -85,3 +92,8 @@
 
   .swiper-pagination
     bottom: 2vw
+
+@media only screen and (max-width: 4502px)
+  .crds_swiper
+    width: 310px
+    height: 425px
