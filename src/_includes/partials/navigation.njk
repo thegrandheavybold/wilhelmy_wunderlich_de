@@ -1,0 +1,80 @@
+<nav class="menu-button-links">
+
+  <button type="button" id="menubutton" title="Navigation" aria-haspopup="true" aria-controls="menu" aria-expanded="false">
+
+    <div class="hamburger">
+              <span></span>
+            </div>
+
+  </button>
+
+  {% set navPages = collections.all | eleventyNavigation %}
+    {% macro renderNavListItem(entry) -%}
+
+        {% if entry.children.length %}
+          <li role="none" class="nav__item {% if entry.url == page.url %} nav__item_active{% endif %}">
+            <details
+              {%- for child in entry.children %}
+                {% if child.parent == entry.title and child.url == page.url %}
+                  class="is-active"
+                  open
+                {% endif %}
+              {% endfor %}
+            >
+              <summary>{{ entry.title }}</summary>
+              <ul role="menu">
+                {%- for child in entry.children %}{{ renderNavListItem(child) }}{% endfor -%}
+              </ul>
+            </details>
+          </li>
+
+        {%- else -%}
+
+        <li role="none" class="nav__item {% if entry.url == page.url %} nav__item_active{% endif %}">
+        <a role="menuitem" href="{{ entry.url }}" {% if entry.url == page.url %} aria-current="page" {% endif %}>{{ entry.title }}</a>
+        </li>
+
+      {%- endif -%}
+
+    {%- endmacro %}
+
+  <ul id="menu" role="menu" aria-labelledby="menubutton" class="nav">
+
+    {%- for entry in navPages %}{{ renderNavListItem(entry) }}{%- endfor -%}
+
+  </ul><!-- .menu_items -->
+
+</nav><!-- .menu-button-links -->
+
+
+<!-- <nav id="site-navigation" class="main-navigation">
+
+  <div class="menu">
+
+    <div class="wrapper">
+
+      <div class="menu__content">
+
+        {% set navPages = collections.all | eleventyNavigation %}
+          {% macro renderNavListItem(entry) -%}
+          <li{% if entry.url == page.url %} class="active"{% endif %}>
+          <a href="{{ entry.url }}">{{ entry.title }}</a>
+          {%- if entry.children.length -%}
+          <ul>
+            {%- for child in entry.children %}{{ renderNavListItem(child) }}{% endfor -%}
+          </ul>
+          {%- endif -%}
+          </li>
+          {%- endmacro %}
+
+        <ul class="menu_items">
+        {%- for entry in navPages %}{{ renderNavListItem(entry) }}{%- endfor -%}
+        </ul>
+
+      </div>
+
+    </div>
+
+  </div>
+
+</nav> -->

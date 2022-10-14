@@ -12,13 +12,23 @@
     object-fit: cover
 
   .greetings
-    position: absolute
-    bottom: 6vw
+    position: relative
+    bottom: -48.5vw
     margin: 0
-    font-size: 19vw
+    font-size: 14vw
     color: $white
+    text-transform: uppercase
+    display: flex
+    justify-content: center
 
 
 .lax
   position: relative
   z-index: -1 !important
+
+.welcome::before
+  content: 'Willkommen.'
+  font-size: 14vw
+  color: $white
+  text-transform: uppercase
+  margin: 0 auto

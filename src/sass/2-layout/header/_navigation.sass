@@ -1,4 +1,237 @@
-.main-navigation
+.menu-button-links
+	margin: 0
+	width: 100vw
+	cursor: pointer
+	position: relative
+
+//Mobile Menu
+@media only screen and (max-width: 1024px)
+	.menu-button-links button, .menu-button-links button:active, .menu-button-links button:focus, .menu-button-links button:visited, .menu-button-links button:focus-visible
+		margin: 0
+		padding: 0
+		background: none
+		border: none
+		position: absolute
+		z-index: 100
+		right: 40px
+		top: -70px
+		//transition: top ease 1.4s
+
+	header.sticky > .header_bar .menu-button-links button
+		top: -27px
+
+	.menu-button-links [role="menu"]
+		margin-left: auto
+		margin-right:  auto
+		display: flex
+		flex-direction: column
+		align-items: center
+		text-align: center
+		background: $red_gradient
+
+	.menu-button-links [role="menuitem"],
+	.menu-button-links [role="separator"]
+		margin: 0
+		padding: 0
+		color: $white
+		font-size: 28px
+		line-height: 34px
+
+	a.st_lvl__link
+		font-size: 40px !important
+		line-height: 48px !important
+
+	ul.rd__lvl li > [role="menuitem"]
+		font-size: 20px !important
+		line-height: 24px !important
+
+	svg.nxt_lvl__arrow
+		display: none
+
+	.st_lvl__item
+		margin-bottom: 1rem
+		&::after
+			content: ''
+			height: 2px
+			width: 95px
+			display: block
+			border-radius: 1rem
+			background: $white
+			margin: 2rem auto
+	.nd_lvl__item
+		margin-top: .5rem
+		margin-bottom: .5rem
+	.rd_lvl__item
+		margin-top: .5rem
+		margin-bottom: .25rem
+
+	ul.nav
+		//transition: border-top ease .7s
+		li:first-of-type
+			@include ptop
+
+	[aria-expanded="true"] + ul.nav
+		margin-top: 24px
+
+	header.sticky > .header_bar .menu-button-links [aria-expanded="true"] + ul.nav
+		margin-top: 16px
+
+	[aria-expanded="true"] + [role="menu"]
+		opacity: 1
+		visibility: visible
+		height: 100vh
+
+	[aria-expanded="false"] + [role="menu"]
+		opacity: 0
+		visibility: hidden
+		transform: translateY(5vw)
+		height: 0
+
+//Desktop Menu
+@media only screen and (min-width: 1025px)
+	.menu-button-links [role="menu"]
+		margin: 1rem auto 0
+		display: flex
+		justify-content: center
+
+	.menu-button-links [role="menuitem"],
+	.menu-button-links [role="separator"]
+		margin: 0
+		padding: 0
+		color: $blue_gray60
+		&:hover
+			color: $red_light50
+
+	ul.praxis_items, ul.service_items
+		background: $blue_gray20
+		position: absolute
+		width: 100vw
+		height: 370px
+		padding: 40px 0
+		//margin-top: 24px
+		transition: opacity ease .7s, translateY ease .4s, border-top ease 1.4s
+		justify-content: center
+		flex-wrap: wrap
+		flex-direction: column
+		align-content: space-evenly
+		//translate: -35% 0
+		display: flex
+		//overflow: hidden
+		visibility: hidden
+		opacity: 0
+		//box-sizing: border-box
+		transform: translateY(-600px)
+		z-index: 90
+		left: 0
+		border-top: solid 24px $white
+
+		[role="menuitem"],
+		[role="separator"]
+			margin: 0
+			padding: 0
+			display: block
+			color: $blue_gray60
+			font-size: min(max(4vw), 2rem)
+			line-height: min(max(6vw), 3.5rem)
+
+	header.sticky > .header_bar .menu-button-links ul.praxis_items,
+	header.sticky > .header_bar .menu-button-links ul.service_items
+		border-top: solid 16px $white
+
+
+	a.st_lvl__link
+		margin-right: 2rem !important
+		text-transform: uppercase
+		&:last-child
+			margin-right: 0
+
+	ul.rd__lvl
+		[role="menuitem"],
+		[role="separator"]
+			font-size: min(max(2vw), 1rem)
+			line-height: min(max(5vw), 2rem)
+
+	[role="menuitem"][aria-current="currentpage"]
+		color: $red_light50 !important
+
+	.nxt_lvl svg.nxt_lvl__arrow
+		margin-left: 3px
+		margin-bottom: 3px
+		transition: all ease .7s
+
+	.nxt_lvl:hover
+		svg.nxt_lvl__arrow
+			transform: rotate(180deg)
+			stroke: $red_light50
+
+	//[aria-current="currentpage"]
+		svg.nxt_lvl__arrow
+			stroke: $red_light50
+
+	.nxt_lvl:hover > .praxis_items,
+	.nxt_lvl:hover > .service_items
+		visibility: visible
+		opacity: 1
+		transform: translateY(0)
+
+	.nxt_lvl:hover > a:first-child
+		color: $red_light50
+
+
+	.menu-button-links button
+		display: none
+
+
+//.nxt_lvl:hover > ul.praxis_items, .nxt_lvl:hover > ul.service_items
+	visibility: visible
+	opacity: 1
+	//display: block
+
+
+
+//ul.nav
+	li.nav__item
+		width: 135px
+
+		summary
+			position: relative
+			list-style: none
+			width: 100%
+
+		summary::marker
+			color: transparent
+
+		summary::after
+			content:  url(/assets/img/nav__arrow.svg)
+			position: absolute
+			width: 14px
+			height: 8px
+			//right: -1rem
+			//top: -0.35rem
+			transition: all 0.5s
+			transform-origin: center
+
+		details[open] summary::after
+			transform: rotate(180deg)
+
+		details[open]
+			transition: all ease .7s
+			ul
+				background-color: $blue_gray20
+				width: 100vw
+				position: absolute
+				margin-top: 24px
+				left: 0
+				li
+					width: 100%
+					ul
+						margin-top: 0
+
+
+
+
+
+//.main-navigation
 	//width: 100%
 	margin-top: 32px
 	display: flex

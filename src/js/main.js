@@ -1,14 +1,14 @@
 //Shrinking Header on Scroll
- window.addEventListener('scroll', function(){
+window.addEventListener('scroll', function(){
 
-   const target = document.querySelector('header');
-   var sticky = target.offsetTop + 100;
+  const target = document.querySelector('header');
+    var sticky = target.offsetTop + 100;
 
-     if (window.pageYOffset > sticky) {
-       target.classList.add('sticky');
-     } else {
+    if (window.pageYOffset > sticky) {
+      target.classList.add('sticky');
+    } else {
        target.classList.remove('sticky');
-     }
+    }
 
 });
 
@@ -165,3 +165,5 @@ new Accordion('.accordion-container', {
   console.log(currentElement);
   }
 });
+
+import 'navigation.js'

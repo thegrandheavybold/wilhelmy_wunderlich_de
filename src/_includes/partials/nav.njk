@@ -1,0 +1,111 @@
+<nav class="menu-button-links">
+
+  <button type="button" id="menubutton" title="Navigation" aria-haspopup="true" aria-controls="menu" aria-expanded="false">
+
+    <div class="hamburger">
+              <span></span>
+            </div>
+
+  </button>
+
+
+
+  <ul id="menu" role="menu" aria-labelledby="menubutton" class="nav">
+    <li role="none" class="nav__item nxt_lvl st_lvl__item">
+      <a role="menuitem" class="st_lvl__link">
+        Praxis
+        <span>
+          <svg class="nxt_lvl__arrow">
+            <use xlink:href="#nxt_lvl__arrow"></use>
+          </svg>
+        </span>
+      </a>
+
+      <ul role="none" class="praxis_items">
+
+        <li role="none" class="nav__item nd_lvl__item">
+          <a role="menuitem" href="/uebersicht" aria-current="{{ 'current' if '/uebersicht' in page.url }}page">Übersicht</a>
+        </li>
+
+        <li role="none" class="nav__item nd_lvl__item">
+
+          <a role="menuitem" href="/team" aria-current="{{ 'current' if '/team' in page.url }}page">Zahnärztinnen & Team</a>
+
+          <ul role="none" class="rd__lvl">
+            <li role="none" class="nav__item rd_lvl__item">
+              <a role="menuitem" href="/Dr_Julia_Wilhelmy-Wunderlich" aria-current="{{ 'current' if '/Dr_Julia_Wilhelmy-Wunderlich' in page.url }}page">Dr. JuliaWilhelmy-Wunderlich</a>
+            </li>
+            <li role="none" class="nav__item rd_lvl__item">
+              <a role="menuitem" href="/Dr_Janna_Bruns" aria-current="{{ 'current' if '/Dr_Janna_Bruns' in page.url }}page">Dr. Janna Bruns</a>
+            </li>
+
+          </ul>
+
+        </li>
+
+        <li role="none" class="nav__item nd_lvl__item">
+          <a role="menuitem" href="/unser-praxiskonzept" aria-current="{{ 'current' if '/unser-praxiskonzept' in page.url }}page">Unser Praxiskonzept</a>
+        </li>
+
+        <li role="none" class="nav__item nd_lvl__item">
+          <a role="menuitem" href="/ausstattung" aria-current="{{ 'current' if '/ausstattung' in page.url }}page">Ausstattung</a>
+        </li>
+
+        <li role="none" class="nav__item nd_lvl__item">
+          <a role="menuitem" href="/offene-stellen" aria-current="{{ 'current' if '/offene-stellen' in page.url }}page">Offene Stellen</a>
+        </li>
+
+      </ul>
+    </li>
+
+    <li role="none" class="nav__item st_lvl__item">
+
+      <a role="menuitem" href="/leistungen" aria-current="{{ 'current' if '/leistungen' in page.url }}page" class="st_lvl__link">Leistungen</a>
+
+    </li>
+
+    <li role="none" class="nav__item nxt_lvl st_lvl__item">
+      <a role="menuitem" class="st_lvl__link">
+        Service
+        <span>
+          <svg class="nxt_lvl__arrow">
+            <use xlink:href="#nxt_lvl__arrow"></use>
+          </svg>
+        </span>
+      </a>
+
+      <ul role="none" class="service_items">
+
+        <li role="none" class="nav__item nd_lvl__item">
+          <a role="menuitem" href="/faq" aria-current="{{ 'current' if '/faq' in page.url }}page">FAQ</a>
+        </li>
+
+        <li role="none" class="nav__item nd_lvl__item">
+          <a role="menuitem" href="/termin" aria-current="{{ 'current' if '/termin' in page.url }}page">Terminvereinbarung</a>
+        </li>
+
+        <li role="none" class="nav__item nd_lvl__item">
+          <a role="menuitem" href="/notfalltipps" aria-current="{{ 'current' if '/notfalltipps' in page.url }}page">Notfalltipps</a>
+        </li>
+
+        <li role="none" class="nav__item nd_lvl__item">
+          <a role="menuitem" href="/links" aria-current="{{ 'current' if '/links' in page.url }}page">Links</a>
+        </li>
+
+      </ul>
+
+    </li>
+
+    <li role="none" class="nav__item st_lvl__item">
+
+      <a role="menuitem" href="/kontakt-anfahrt" aria-current="{{ 'current' if '/kontakt-anfahrt' in page.url }}page" class="st_lvl__link">Kontakt & Anfahrt</a>
+
+    </li>
+
+    <li role="none" class="nav__item st_lvl__item">
+      <a role="menuitem" href="/termin" aria-current="{{ 'current' if '/termin' in page.url }}page" class="st_lvl__link">Terminvereinbarung</a>
+    </li>
+
+  </ul><!-- .menu_items -->
+
+</nav><!-- .menu-button-links -->

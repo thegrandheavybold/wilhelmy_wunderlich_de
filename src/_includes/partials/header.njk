@@ -15,45 +15,7 @@
       </a>
     </div><!-- .site-branding -->
 
-    <nav id="site-navigation" class="main-navigation">
-
-      <!-- <button class="menu-toggle" aria-controls="primary-menu" aria-expanded="false" aria-label="Open the main menu">
-        <div class="hamburger">
-          <span></span>
-        </div>
-      </button> -->
-
-      <div class="menu">
-
-        <div class="wrapper">
-
-          <div class="menu__content">
-
-            {% set navPages = collections.all | eleventyNavigation %}
-              {% macro renderNavListItem(entry) -%}
-              <li{% if entry.url == page.url %} class="active"{% endif %}>
-              <a href="{{ entry.url }}">{{ entry.title }}</a>
-              {%- if entry.children.length -%}
-              <ul>
-                {%- for child in entry.children %}{{ renderNavListItem(child) }}{% endfor -%}
-              </ul>
-              {%- endif -%}
-              </li>
-              {%- endmacro %}
-
-            <ul class="menu_items">
-            {%- for entry in navPages %}{{ renderNavListItem(entry) }}{%- endfor -%}
-            </ul><!-- .menu_items -->
-
-          </div><!-- .menu__content -->
-
-        </div><!-- .wrapper -->
-
-      </div><!-- .menu -->
-
-    </nav><!-- #site-navigation -->
-
-
+    {%- include "partials/nav.njk"-%}
 
   </div><!-- .header_bar -->
 
