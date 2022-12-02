@@ -173,7 +173,7 @@ import  ScrollTrigger  from 'gsap/ScrollTrigger';
 
 gsap.registerPlugin(ScrollTrigger);
 
-//gsap outofview imdb list items
+//gsap outofview fadeUp
 const oov = gsap.utils.toArray('.oov');
   oov.forEach(oov => {
     gsap.from(oov, {

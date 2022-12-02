@@ -37,10 +37,11 @@
 
       span.sticky_content_item
         opacity: 0
-        transition: all ease 2s
+        transition: all ease .7s
+        will-change: transition color opacity visibility
         transform: translateY(20px)
         visibility: hidden
-        display: none
+        //display: none
         position: relative
         right: 20px
 
@@ -52,7 +53,7 @@
     transform: translateY(0)
     opacity: 1
     visibility: visible
-    display: block
+    //display: block
 
 // Hiding for Mobile
 @media only screen and (max-width: 768px)

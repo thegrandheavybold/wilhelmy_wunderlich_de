@@ -15542,7 +15542,7 @@ new Accordion(accordions, {
     console.log(currentElement);
   }
 });
-gsapWithCSS.registerPlugin(ScrollTrigger); //gsap outofview imdb list items
+gsapWithCSS.registerPlugin(ScrollTrigger); //gsap outofview fadeUp
 
 var oov = gsapWithCSS.utils.toArray('.oov');
 oov.forEach(function (oov) {

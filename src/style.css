@@ -1828,6 +1828,9 @@ ul.service_items [role=separator] {
     font-size: min(4vw, 2rem);
     line-height: min(6vw, 3.5rem);
   }
+  ul.service_items {
+    height: 350px;
+  }
   header.sticky > .header_bar .menu-button-links ul.praxis_items,
 header.sticky > .header_bar .menu-button-links ul.service_items {
     border-top: solid 16px #fff;
@@ -2065,10 +2068,10 @@ section.fond .wrapper .copy_intro {
 }
 .sticky_badge ul.sticky_icons li span.sticky_content_item {
   opacity: 0;
-  transition: all ease 2s;
+  transition: all ease 0.7s;
+  will-change: transition color opacity visibility;
   transform: translateY(20px);
   visibility: hidden;
-  display: none;
   position: relative;
   right: 20px;
 }
@@ -2079,7 +2082,6 @@ section.fond .wrapper .copy_intro {
   transform: translateY(0);
   opacity: 1;
   visibility: visible;
-  display: block;
 }
 
 @media only screen and (max-width: 768px) {
