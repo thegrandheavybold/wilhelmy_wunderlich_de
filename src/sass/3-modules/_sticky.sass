@@ -32,13 +32,21 @@
       position: relative
       cursor: pointer
       height: 35px
+      transition: all ease 2s
+
 
       span.sticky_content_item
         opacity: 0
-        transition: all ease .7s
+        transition: all ease 2s
         transform: translateY(20px)
         visibility: hidden
         display: none
+        position: relative
+        right: 20px
+
+      a:hover
+        svg
+          fill: $red_light50
 
   ul.sticky_icons li:hover > span.sticky_content_item
     transform: translateY(0)

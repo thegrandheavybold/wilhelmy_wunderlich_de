@@ -387,7 +387,7 @@ template {
 
 /*** Swiper Styles */
 /**
- * Swiper 8.3.2
+ * Swiper 8.4.5
  * Most modern mobile touch slider and framework with hardware accelerated transitions
  * https://swiperjs.com
  *
@@ -395,7 +395,7 @@ template {
  *
  * Released under the MIT License
  *
- * Released on: July 26, 2022
+ * Released on: November 21, 2022
  */
 @font-face {
   font-family: "swiper-icons";
@@ -988,6 +988,7 @@ button.swiper-pagination-bullet {
   font-size: min(5vw, 1rem);
   line-height: min(7vw, 1.5rem);
   padding: 0 0 1rem 0;
+  display: block;
 }
 
 .ac .ac-trigger {
@@ -1080,6 +1081,8 @@ a {
 }
 a:hover, a:focus, a:active {
   color: #CB0B0F;
+  border: none;
+  outline: 0;
 }
 a:hover, a:active {
   outline: 0;
@@ -1120,6 +1123,11 @@ ul {
   list-style: none;
 }
 
+ul.bullets {
+  list-style: disc;
+  list-style-position: inside;
+}
+
 ol {
   list-style: decimal;
 }
@@ -1152,7 +1160,6 @@ button {
   font-style: normal;
   font-size: min(3vw, 0.778rem);
   line-height: min(4vw, 1.167rem);
-  transition: all ease 0.7s;
   box-sizing: border-box;
 }
 
@@ -1167,8 +1174,9 @@ button {
 
 .btn_red {
   border: 3px solid #CB0B0F;
-  background: #CB0B0F;
+  background: #CB0B0F border-box;
   color: #fff;
+  transition: color ease 1s;
 }
 .btn_red:hover {
   border: 3px solid transparent;
@@ -1209,6 +1217,7 @@ button {
   border: 3px solid #CB0B0F;
   background: #fff;
   color: #CB0B0F;
+  transition: background ease 1s;
 }
 .ww_message:hover {
   border: 3px solid transparent;
@@ -1467,6 +1476,14 @@ svg.ww_phone, svg.ww_envelope, svg.ww_route, svg.ww_calendar {
   width: 32px;
   height: 32px;
   background: none;
+  fill: #788C8C;
+  transition: fill ease 0.4s;
+  will-change: fill;
+}
+
+svg.ww_calendar {
+  stroke: #788C8C;
+  stroke-width: 0.3;
 }
 
 svg.ww_flame {
@@ -1969,7 +1986,7 @@ section.fond .wrapper .copy_intro {
   margin-top: 1vw;
 }
 @media only screen and (max-width: 1024px) {
-  .intro .wrapper .copy_intro {
+  .intro .wrapper .intro_content .copy_intro {
     text-align: left;
   }
 }
@@ -2044,13 +2061,19 @@ section.fond .wrapper .copy_intro {
   position: relative;
   cursor: pointer;
   height: 35px;
+  transition: all ease 2s;
 }
 .sticky_badge ul.sticky_icons li span.sticky_content_item {
   opacity: 0;
-  transition: all ease 0.7s;
+  transition: all ease 2s;
   transform: translateY(20px);
   visibility: hidden;
   display: none;
+  position: relative;
+  right: 20px;
+}
+.sticky_badge ul.sticky_icons li a:hover svg {
+  fill: #CB0B0F;
 }
 .sticky_badge ul.sticky_icons li:hover > span.sticky_content_item {
   transform: translateY(0);
@@ -2373,7 +2396,7 @@ section.team_portrait .wrapper {
   justify-content: space-evenly;
   flex-wrap: wrap;
   position: relative;
-  top: -5vw;
+  top: -3vw;
 }
 section.team_portrait .wrapper .item_1, section.team_portrait .wrapper .item_2 {
   display: flex;

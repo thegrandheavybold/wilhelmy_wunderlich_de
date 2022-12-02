@@ -155,9 +155,10 @@ const crdsSwiper = new Swiper('.crds_swiper', {
 
 //Import Accordion js
 import Accordion from 'accordion-js';
+const accordions = Array.from(document.querySelectorAll('.accordion-container'));
 
 // User options
-new Accordion('.accordion-container', {
+new Accordion(accordions, {
   duration: 400,
   showMultiple: false,
   ariaEnabled: true,
@@ -166,4 +167,22 @@ new Accordion('.accordion-container', {
   }
 });
 
-import 'navigation.js'
+
+import  gsap  from 'gsap';
+import  ScrollTrigger  from 'gsap/ScrollTrigger';
+
+gsap.registerPlugin(ScrollTrigger);
+
+//gsap outofview imdb list items
+const oov = gsap.utils.toArray('.oov');
+  oov.forEach(oov => {
+    gsap.from(oov, {
+    y: 150,
+    opacity: 0,
+      scrollTrigger: {
+        trigger: oov,
+        scrub: 2,
+        end: "bottom 90%"
+      }
+    })
+});
