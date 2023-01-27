@@ -2,7 +2,7 @@
   width: 100vw
   height: auto
   overflow: hidden
-  margin: 5vw 0 0
+  margin: 0
 
   h3
     padding-bottom: 1rem
@@ -13,14 +13,19 @@
 
   .greetings
     position: relative
-    bottom: -48.5vw
+    bottom: -49vw
     margin: 0
     font-size: 14vw
     color: $white
     text-transform: uppercase
     display: flex
     justify-content: center
-
+  @media only screen and (max-width: 768px)
+    .greetings
+      bottom: -49.5vw
+  @media only screen and (max-width: 375px)
+    .greetings
+      bottom: -51.5vw
 
 .lax
   position: relative

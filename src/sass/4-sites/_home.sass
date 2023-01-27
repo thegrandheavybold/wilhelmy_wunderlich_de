@@ -9,6 +9,7 @@ section.intro
 
     .topline
       grid-area: a
+      margin-bottom: 0
 
     .copy_intro
       grid-area: b
@@ -65,7 +66,8 @@ section.praxis_teaser
 
 section.quote, div.quote
   background: $blue_gray20
-  padding: 8vw 0
+  @include ptop
+  @include pbottom
 
   .wrapper
     display: flex
@@ -97,7 +99,7 @@ section.credo_teaser
       width: 100%
 
       button
-        margin-top: 5vw
+        margin-top: 40px
 
   @media only screen and (max-width: 1024px)
     .wrapper

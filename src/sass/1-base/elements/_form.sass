@@ -2,7 +2,6 @@ form
   display: flex
   //flex-direction: column
   flex-wrap: wrap
-  width: 63%
   margin: 0 auto
   position: relative
   justify-content: space-between
@@ -67,3 +66,12 @@ fieldset.client_contact
 fieldset.message
   label:nth-child(2), #message
     width: 100%
+
+
+@media only screen and (max-width: 600px)
+  label
+    width: 100%
+
+  fieldset.client_contact
+    label:nth-child(1)
+      margin-right: 0

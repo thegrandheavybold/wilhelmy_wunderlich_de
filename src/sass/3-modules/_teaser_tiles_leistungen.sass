@@ -1,6 +1,6 @@
 section.teaser_tiles_leistungen
   background: $white
-  @include mtop
+  @include ptop
   @include pbottom
 
   .wrapper
@@ -21,7 +21,6 @@ section.teaser_tiles_leistungen
       flex-direction: column
       .copy_intro
         text-align: center
-        margin-top: 2.5vw
         @include mbottom
 
     .item_2
@@ -40,8 +39,7 @@ section.teaser_tiles_leistungen
 
     .item_5
       justify-content: center
-      @include mtop
-      @include mbottom
+      margin-top: 80px
 
   @media only screen and (max-width: 768px)
     .wrapper
@@ -63,4 +61,5 @@ section.teaser_tiles_leistungen
           order: 2
 
       .item_5
+        margin-top: 40px
         margin-bottom: 0

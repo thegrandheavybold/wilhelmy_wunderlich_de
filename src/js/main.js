@@ -1,3 +1,5 @@
+import 'navigation.js'
+
 //Shrinking Header on Scroll
 window.addEventListener('scroll', function(){
 
@@ -59,7 +61,7 @@ import Swiper, { Lazy, Pagination, Navigation, Autoplay, EffectFade, EffectCards
 const qtsSwiper = new Swiper('.qts_swiper', {
   // Optional parameters
   direction: 'horizontal',
-  loop: true,
+  loop: false,
   slidesPerView: 1,
   watchSlidesProgress: true,
   centeredSlides: true,
@@ -125,10 +127,10 @@ const impsSwiper = new Swiper('.imps_swiper', {
 const crdsSwiper = new Swiper('.crds_swiper', {
   centerSlide: 'true',
   slidesPerView: 1,
-  initialSlide: 2,
+  //initialSlide: 1,
 
   // Optional parameters
-  modules: [EffectCards],
+  modules: [EffectCards, Navigation],
 
   effect: 'cards',
   cardsEffect: {
@@ -137,15 +139,16 @@ const crdsSwiper = new Swiper('.crds_swiper', {
     slideShadows: false,
     //transformEl: 'swiper-slide'
   },
-
-
   // If we need pagination
   pagination: {
     el: '.swiper-pagination',
     type: 'bullets',
     clickable: true
   },
-
+  navigation: {
+    nextEl: '.swiper-btn-next',
+    prevEl: '.swiper-btn-prev'
+  },
   renderBullet: function (index, className) {
     return '<span class="' + className + '">' + (index + 1) + '</span>';
   }

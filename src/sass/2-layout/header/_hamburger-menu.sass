@@ -7,7 +7,7 @@ button.menu-toggle
   cursor: pointer
 
 .hamburger
-  width: 45px
+  width: 32px
   height: 30px
   position: relative
   display: flex
@@ -15,7 +15,7 @@ button.menu-toggle
   justify-content: center
 
   span, span::before, span::after
-    width: 45px
+    width: 32px
     height: 2px
     border-radius: 1rem
     display: block
@@ -28,9 +28,9 @@ button.menu-toggle
     display: block
 
   span::before
-    top: -12px
+    top: -6px
   span::after
-    bottom: -12px
+    bottom: -6px
 
 [aria-expanded="true"] >
 
@@ -56,12 +56,12 @@ button.menu-toggle
     transition: transform .5s, width ease .7s
 
     &::before
-      top: -12px
+      top: -6px
       opacity: 1
       transition: opacity ease .5s .7s, top .5s .7s, width ease .7s
 
     &::after
-      bottom: -12px
+      bottom: -6px
       transform: rotate(0)
       transition: transform ease .5s .2s, bottom ease .5s .7s, width ease .7s
 

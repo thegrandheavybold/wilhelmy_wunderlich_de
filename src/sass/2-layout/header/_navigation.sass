@@ -5,7 +5,7 @@
 	position: relative
 
 //Mobile Menu
-@media only screen and (max-width: 1024px)
+@media only screen and (max-width: 1023px)
 	.menu-button-links
 		height: 0
 	.menu-button-links button, .menu-button-links button:active, .menu-button-links button:focus, .menu-button-links button:visited, .menu-button-links button:focus-visible
@@ -15,7 +15,7 @@
 		border: none
 		position: absolute
 		z-index: 100
-		right: 40px
+		right: 20px
 		top: -70px
 		//transition: top ease 1.4s
 
@@ -115,7 +115,7 @@
 		visibility: hidden
 
 //Desktop Menu
-@media only screen and (min-width: 1025px)
+@media only screen and (min-width: 1024px)
 	.menu-button-links [role="menu"]
 		margin: 1rem auto 0
 		display: flex
@@ -162,7 +162,7 @@
 			line-height: min(max(6vw), 3.5rem)
 	ul.service_items
 		height: 350px
-		
+
 	header.sticky > .header_bar .menu-button-links ul.praxis_items,
 	header.sticky > .header_bar .menu-button-links ul.service_items
 		border-top: solid 16px $white
@@ -173,6 +173,11 @@
 		text-transform: uppercase
 		&:last-child
 			margin-right: 0
+		&.active
+			color: $red_light50
+			span svg.nxt_lvl__arrow
+				stroke: $red_light50
+
 
 	ul.rd__lvl
 		[role="menuitem"],
@@ -213,103 +218,3 @@
 	ul.nav li.st_lvl__item:nth-of-type(5),
 	nav.menu-button-links > ul.nav .meta_informations
 		display: none
-
-//.nxt_lvl:hover > ul.praxis_items, .nxt_lvl:hover > ul.service_items
-	visibility: visible
-	opacity: 1
-	//display: block
-
-
-
-//ul.nav
-	li.nav__item
-		width: 135px
-
-		summary
-			position: relative
-			list-style: none
-			width: 100%
-
-		summary::marker
-			color: transparent
-
-		summary::after
-			content:  url(/assets/img/nav__arrow.svg)
-			position: absolute
-			width: 14px
-			height: 8px
-			//right: -1rem
-			//top: -0.35rem
-			transition: all 0.5s
-			transform-origin: center
-
-		details[open] summary::after
-			transform: rotate(180deg)
-
-		details[open]
-			transition: all ease .7s
-			ul
-				background-color: $blue_gray20
-				width: 100vw
-				position: absolute
-				margin-top: 24px
-				left: 0
-				li
-					width: 100%
-					ul
-						margin-top: 0
-
-
-
-
-
-//.main-navigation
-	//width: 100%
-	margin-top: 32px
-	display: flex
-	flex-wrap: wrap
-	.menu
-		width: 100vw
-		//height: 100vh
-		//position: fixed
-		//top: 0
-		//left: 0
-		//background: $taupe
-		transition: all ease .7s
-		transition-property: transform, opacity
-		//z-index: -1
-		//overflow-x: scroll
-
-	.menu-toggle[aria-expanded= "false"] + .menu
-		transform: scale(0)
-		opacity: 0
-		visibility: hidden
-
-	.menu-toggle[aria-expanded="true"] + .menu
-		transform: scale(1)
-		opacity: 1
-		visibility: visible
-
-
-	.menu__content
-		//width: 501px
-		display: flex
-		justify-content: center
-
-		ul.menu_items
-			display: flex
-			flex-direction: row
-			justify-content: space-between
-			//width: 100%
-
-			li
-				margin-right: 1rem
-				a
-					text-transform: uppercase
-					color: $blue_gray60
-					//font-size: min(max(4vw), 24px)
-					//line-height: min(max(7vw), 27px)
-					//letter-spacing: -0.2rem
-
-			&:last-of-type
-				margin-right: 0

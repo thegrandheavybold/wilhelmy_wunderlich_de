@@ -29,14 +29,14 @@ layout: "layouts/base.njk"
 
   <div class="wrapper">
 
-    <div class="item_1" data="fade-up">
+    <div class="item_1 sxty" data="fade-up">
 
       <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes</p>
 
     </div><!-- .item_1 -->
 
 
-    <div class="item_2">
+    <div class="item_2 sxty">
 
       <div class="accordion-container">
 
@@ -75,14 +75,10 @@ layout: "layouts/base.njk"
 
     </div><!-- .item_2 -->
 
-    <div class="item_3">
-
-      <h4 data="fade-up">Ihre Frage wurde nicht beantwortet?</h4>
-      <p class="copy" data="fade-up delay">Nulla consequat massa quis enim.  Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu.</p>
-      <button class="btn btn_red" onclick="location.href='/'" type="button" data="fade-up">E-Mail schreiben</button>
-
-    </div><!-- .item_3 -->
+    {% include "partials/cta__notanswered.njk" %}
 
   </div><!-- .wrapper -->
 
 </section>
+
+{% include "partials/cta__questions.njk"%}

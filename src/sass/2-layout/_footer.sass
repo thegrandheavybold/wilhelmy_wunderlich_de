@@ -1,12 +1,12 @@
 footer
   background: $red_gradient
   color: $white
-  @include ptop
+  padding-top: 80px
 
   .badge
     position: absolute
     right: 0
-    top: -5vw
+    top: -80px
     grid-column: 1/-1
 
   .directions
@@ -17,7 +17,7 @@ footer
     @include mbottom
 
     p
-      width: 70vw
+      width: 100%
       text-align: center
 
   .meta_informations
@@ -30,8 +30,8 @@ footer
       width: 25%
       min-width: 256px
       &:nth-child(2)
-        width: 70%
-        padding: 0 0 1.5rem
+        width: 40%
+        padding: 0 3vw
 
     a
       color: $white
@@ -53,17 +53,25 @@ footer
         span.scrollUp
           cursor: pointer
 
+@media only screen and (min-width: 610px) and (max-width: 940px)
+  .meta_informations
+    .meta_informations__item:nth-child(2)
+      width: 100% !important
+      order: 3
+
+@media only screen and (max-width: 609px)
+  .meta_informations
+    .meta_informations__item:nth-child(2)
+      width: 100% !important
+      padding: 0 !important
+
 
 @media only screen and (min-width: 769px)
   footer
     .directions
       p
-        width: 50vw
+        width: 70%
 
-    .meta_informations
-      .meta_informations__item:nth-child(2)
-        width: 50%
-        padding: 0 4vw
 
 @media only screen and (max-width: 768px)
   footer
@@ -72,7 +80,7 @@ footer
 
     .badge
       position: relative
-      top: -5vw
+      top: -80px
       grid-column: 1/-1
       display: flex
       justify-content: flex-end

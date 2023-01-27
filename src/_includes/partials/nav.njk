@@ -12,7 +12,7 @@
 
   <ul id="menu" role="menu" aria-labelledby="menubutton" class="nav">
     <li role="none" class="nav__item nxt_lvl st_lvl__item">
-      <a role="menuitem" class="st_lvl__link">
+      <a role="menuitem" class="st_lvl__link {{ 'active' if '/uebersicht-praxis' in page.url }}{{ 'active' if '/team' in page.url }}{{ 'active' if '/Dr_Julia_Wilhelmy-Wunderlich' in page.url }}{{ 'active' if '/Dr_Janna_Bruns' in page.url }}{{ 'active' if '/unser-praxiskonzept' in page.url }}{{ 'active' if '/ausstattung' in page.url }}{{ 'active' if '/offene-stellen' in page.url }}">
         Praxis
         <span>
           <svg class="nxt_lvl__arrow">
@@ -65,7 +65,7 @@
     </li>
 
     <li role="none" class="nav__item nxt_lvl st_lvl__item">
-      <a role="menuitem" class="st_lvl__link">
+      <a role="menuitem" class="st_lvl__link {{ 'active' if '/uebersicht-service' in page.url }}{{ 'active' if '/faq' in page.url }}{{ 'active' if '/termin' in page.url }}{{ 'active' if '/notfalltipps' in page.url }}{{ 'active' if '/links' in page.url }}">
         Service
         <span>
           <svg class="nxt_lvl__arrow">

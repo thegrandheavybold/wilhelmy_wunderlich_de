@@ -10,6 +10,7 @@ header
   //display: flex
   //justify-content: space-between
   transition: padding ease 1.4s
+
   &.sticky
     padding: 16px 40px 16px 40px
     border-bottom: solid 2px $blue_gray20
@@ -20,6 +21,8 @@ header
     opacity: 1
     visibility: visible
     transition: all ease .7s
+    font-size: 14px
+    line-height: 20px
     &::first-line
       color: $blue_gray60
 
@@ -55,6 +58,9 @@ header
     margin-top: 16px
 
 
-@media only screen and (max-width: 1024px)
+@media only screen and (max-width: 1023px)
   .ww-description, .contact_btns
     display: none
+@media only screen and (max-width: 1340px)
+  .contact_btns
+    opacity: 0 !important
