@@ -2914,6 +2914,7 @@ section.team_portrait .wrapper .item_1, section.team_portrait .wrapper .item_2 {
   align-items: center;
   justify-content: space-between;
   width: 30vw;
+  max-width: 439px;
 }
 section.team_portrait .wrapper .item_1 div:nth-child(1), section.team_portrait .wrapper .item_2 div:nth-child(1) {
   display: block;
