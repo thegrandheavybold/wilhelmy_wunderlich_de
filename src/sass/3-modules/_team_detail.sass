@@ -2,12 +2,14 @@
   padding-bottom: 0
 
   .item_2
-    width: 60%
-    max-width: 60%
+    width: 60vw
+    //max-width: 60vw
     background: none
+
   .item_3
     width: 100%
     padding: 0 15%
+    margin-top: 40px
 
 section.member
   background: $blue_gray20
@@ -34,3 +36,17 @@ section.back_btn
   .wrapper
     display: flex
     justify-content: center
+
+
+@media only screen and (max-width: 768px)
+  .team_detail
+    .wrapper
+      .item_1
+        margin-bottom: 0 !important
+        div:nth-child(1)
+          margin-bottom: 0 !important
+      .quote
+        width: 100vw !important
+      .item_3
+        margin-top: 0
+        padding: 0

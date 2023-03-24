@@ -90,7 +90,7 @@
 	header.sticky > .header_bar .menu-button-links [aria-expanded="true"] + ul.nav
 		margin-top: 16px
 
-	ul.service_items li.nd_lvl__item:nth-of-type(2)
+	ul.service_items li.nd_lvl__item:nth-of-type(3)
 		display: none
 
 	li.meta_informations
@@ -125,6 +125,8 @@
 	.menu-button-links [role="separator"]
 		margin: 0
 		padding: 0
+		font-size: 14px
+		@include font_bold
 		color: $blue_gray60
 		&:hover
 			color: $red_light50
@@ -158,7 +160,8 @@
 			padding: 0
 			display: block
 			color: $blue_gray60
-			font-size: min(max(4vw), 2rem)
+			font-size: 32px
+			@include font_regular
 			line-height: min(max(6vw), 3.5rem)
 	ul.service_items
 		height: 350px
