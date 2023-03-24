@@ -10,6 +10,7 @@ header
   //display: flex
   //justify-content: space-between
   transition: padding ease 1.4s
+  will-change: padding
 
   &.sticky
     padding: 16px 40px 16px 40px
@@ -21,6 +22,7 @@ header
     opacity: 1
     visibility: visible
     transition: all ease .7s
+    will-change: all
     font-size: 14px
     line-height: 20px
     &::first-line
@@ -39,6 +41,7 @@ header
     opacity: 1
     visibility: visible
     transition: all ease .7s
+    will-change: all
     justify-self: self-end
     .btn:first-of-type
       margin-right: clamp(.25rem, .5vw, 1rem)
@@ -47,6 +50,7 @@ header
     opacity: 1
     visibility: visible
     transition: all ease .7s
+    will-change: all
 
   &.sticky > .contact_btns, &.sticky > .ww-description, &.sticky > .header_bar .site-branding #logo svg.ww_logo_typo
     opacity: 0

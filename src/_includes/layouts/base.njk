@@ -2,9 +2,11 @@
 <html lang="de" dir="ltr" id="{{ page.fileSlug }}">
   <head>
     <meta charset="utf-8">
+    <title>{{seoTitle}} · {{ site.metaTitle }}</title>
+    <meta name="description" content="{{seoDescription}}">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>{{ site.metaTitle }} | {{ title }}</title>
+
 
     <!-- favicon -->
     <link rel="icon" href="/assets/fav/favicon.ico" sizes="any">
@@ -31,10 +33,12 @@
 
     <!-- open graph -->
     <meta property="og:type" content="article">
-    <meta property="og:title" content="{{ site.metaTitle }}">
-    <meta property="og:image" content="{{ metaImage }}">
+    <meta property="og:title" content="{{ seoTitle }} · {{ site.metaTitle }}">
+    <meta property="og:image" content="{{ site.url }}/assets/img/{{ metaImage }}">
+    <meta property="og:image:secure_url" content="{{ site.url }}/assets/img/{{ metaImage }}}">
     <meta property="og:site_name" content="{{ site.name }}">
-    <meta property="og:description" content="{{ site.metaDescription }}">
+    <meta property="og:description" content="{{ seoDescription }}">
+    <meta property="og:url" content="{{ site.url }}{{ page.url }}">
 
 
   </head>
