@@ -15857,7 +15857,7 @@ new Swiper('.crds_swiper', {
   //initialSlide: 1,
 
   // Optional parameters
-  modules: [EffectCards, Navigation],
+  modules: [EffectCards, Navigation, Pagination],
   effect: 'cards',
   cardsEffect: {
     grabCursor: true,

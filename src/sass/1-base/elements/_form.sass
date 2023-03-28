@@ -12,9 +12,11 @@ form
     justify-content: space-between
     color: $blue_gray60
     width: 100%
+
     p
       margin: 0
       padding: 0
+
 
 label
   display: flex
@@ -78,3 +80,13 @@ fieldset.message
   fieldset.client_contact
     label:nth-child(1)
       margin-right: 0
+
+
+@media only screen and (max-width: 400px)
+  form
+    span
+      display: block
+      p
+        margin-bottom: 15px
+      button
+        width: 100%

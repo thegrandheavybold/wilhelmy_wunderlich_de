@@ -5,6 +5,6 @@ module.exports = {
   author: "Christian Kriegsheim",
   metaImage: "",
   //buildTime: new Date(),
-  metaTitle: "Wilhelmy-Wunderlich",
+  metaTitle: "Zahnarztpraxis Wilhelmy-Wunderlich",
   metaDescription: "Zahnarztpraxis und Team Dr. Julia Wilhelmy-Wunderlich"
 };

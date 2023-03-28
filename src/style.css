@@ -1,9 +1,9 @@
 @charset "UTF-8";
-/* 	Theme Name: Susanna Theunissen | Coaching Supervison Beratung
- * Theme URI: https://susannatheunissen.de
+/* 	Theme Name: Zahnarztpraxis und Team Dr. Julia Wilhelmy-Wunderlich
+ * Theme URI: https://wilhelmy-wunderlich.netlify.app/
  * Author: Christian Kriegsheim
  * Author URI: https://tghb.studio
- * Description: Personal Website of Susanna Theunissen
+ * Description: Business Website of Zahnarztpraxis und Team Dr. Julia Wilhelmy-Wunderlich
  * Version: 1.0.0
  * Tags: */
 /*	Normalizing styles have been helped along thanks to the fine work of
@@ -898,6 +898,7 @@ button.swiper-pagination-bullet {
 }
 .crds_swiper .swiper-pagination {
   bottom: 2vw;
+  display: none;
 }
 .crds_swiper .swiper-btn-prev, .crds_swiper .swiper-btn-next {
   top: 40%;
@@ -916,6 +917,9 @@ button.swiper-pagination-bullet {
   }
 }
 @media only screen and (max-width: 767px) {
+  .swiper-pagination {
+    display: block !important;
+  }
   .crds_swiper .swiper-btn-prev, .crds_swiper .swiper-btn-next {
     display: none;
   }
@@ -1048,6 +1052,28 @@ button.swiper-pagination-bullet {
   color: #000;
 }
 
+span.lachgas {
+  display: flex;
+}
+span.lachgas span {
+  width: 70%;
+}
+span.lachgas picture {
+  width: 30%;
+}
+
+@media only screen and (max-width: 768px) {
+  span.lachgas {
+    flex-wrap: wrap;
+  }
+  span.lachgas span {
+    width: 100%;
+  }
+  span.lachgas picture {
+    padding-top: 15px;
+    width: 100%;
+  }
+}
 /*** elements */
 html,
 body {
@@ -1200,6 +1226,9 @@ button {
   font-size: 0.889rem;
   line-height: 1.333rem;
   box-sizing: border-box;
+  appearance: none !important;
+  -webkit-appearance: none !important;
+  -moz-appearance: none !important;
 }
 
 .btn {
@@ -1358,6 +1387,17 @@ fieldset.message label:nth-child(2), fieldset.message #message {
     margin-right: 0;
   }
 }
+@media only screen and (max-width: 400px) {
+  form span {
+    display: block;
+  }
+  form span p {
+    margin-bottom: 15px;
+  }
+  form span button {
+    width: 100%;
+  }
+}
 /* Typography Styles*/
 /* ========================================================================== */
 body,
@@ -1426,6 +1466,7 @@ h6 {
   }
   h3 {
     font-size: 1.333rem;
+    line-height: 1.467rem;
     margin: 0 0 24px 0;
   }
   h4 {
@@ -1795,11 +1836,11 @@ button.menu-toggle {
   .menu-button-links {
     height: 0;
   }
-  .menu-button-links button, .menu-button-links button:active, .menu-button-links button:focus, .menu-button-links button:visited, .menu-button-links button:focus-visible {
+  .menu-button-links button, .menu-button-links button:active, .menu-button-links button:focus, .menu-button-links button:visited, .menu-button-links button:focus-visible, #menubutton {
     margin: 0;
     padding: 0;
-    background: none;
-    border: none;
+    background: none !important;
+    border: none !important;
     position: absolute;
     z-index: 100;
     right: 20px;
@@ -2358,6 +2399,7 @@ section.fond .wrapper .copy_intro {
   height: auto;
   overflow: hidden;
   margin: 0;
+  max-height: 850px;
 }
 .hero h3 {
   padding-bottom: 1rem;
@@ -2955,10 +2997,10 @@ section.team_portrait .wrapper .item_1 div:nth-child(2), section.team_portrait .
 }
 @media only screen and (max-width: 768px) {
   section.team_portrait {
-    margin-top: -40px;
+    margin-top: -30px;
   }
   section.team_portrait .wrapper {
-    top: -40px;
+    top: -30px;
   }
 }
 #team section.hero {
@@ -3079,28 +3121,20 @@ section.back_btn .wrapper {
   }
 }
 /*** FAQ Accordion */
-section.faq_content {
+#faq section.faq_content, #notfalltipps section.faq_content {
   background: #fff;
-  padding-top: 120px;
 }
-@media only screen and (max-width: 768px) {
-  section.faq_content {
-    padding-top: 60px;
-  }
-}
-@media only screen and (max-width: 430px) {
-  section.faq_content {
-    padding-top: 40px;
-  }
-}
-section.faq_content .wrapper {
+#faq section.faq_content .wrapper, #notfalltipps section.faq_content .wrapper {
   display: flex;
   flex-direction: column;
   align-items: center;
 }
-section.faq_content .wrapper .item_1 {
+#faq section.faq_content .wrapper .item_1, #notfalltipps section.faq_content .wrapper .item_1 {
   text-align: center;
   margin-bottom: 2vw;
+}
+#faq section.intro, #notfalltipps section.intro {
+  padding-bottom: 0;
 }
 
 /*** Form Contact */
@@ -3120,45 +3154,37 @@ section.termin_form {
 }
 
 /*** Link site */
-section.links_content {
+#links section.intro {
+  padding-bottom: 0;
+}
+#links section.links_content {
   background: #fff;
-  padding-top: 120px;
   padding-bottom: 120px;
 }
 @media only screen and (max-width: 768px) {
-  section.links_content {
-    padding-top: 60px;
-  }
-}
-@media only screen and (max-width: 430px) {
-  section.links_content {
-    padding-top: 40px;
-  }
-}
-@media only screen and (max-width: 768px) {
-  section.links_content {
+  #links section.links_content {
     padding-bottom: 60px;
   }
 }
 @media only screen and (max-width: 430px) {
-  section.links_content {
+  #links section.links_content {
     padding-bottom: 40px;
   }
 }
-section.links_content .item_1 {
+#links section.links_content .item_1 {
   text-align: center;
 }
-section.links_content ul.item_2 {
+#links section.links_content ul.item_2 {
   display: flex;
   flex-direction: column;
   align-items: center;
   text-align: center;
   margin: 0 auto;
 }
-section.links_content ul.item_2 li {
+#links section.links_content ul.item_2 li {
   margin: 2rem 0;
 }
-section.links_content ul.item_2 li:last-of-type {
+#links section.links_content ul.item_2 li:last-of-type {
   margin: 2rem 0 0;
 }
 

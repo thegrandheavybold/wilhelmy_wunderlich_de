@@ -102,6 +102,7 @@
 
   .swiper-pagination
     bottom: 2vw
+    display: none
 
   .swiper-btn-prev, .swiper-btn-next
     top: 40%
@@ -116,6 +117,8 @@
     height: 425px
 
 @media only screen and (max-width: 767px)
+  .swiper-pagination
+    display: block !important
   .crds_swiper
     .swiper-btn-prev, .swiper-btn-next
       display: none
