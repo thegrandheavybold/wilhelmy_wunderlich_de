@@ -1,0 +1,27 @@
+{
+  "name": "blank_page__dev_kit",
+  "description": "",
+  "keywords": [],
+  "version": "1.0.0",
+  "author": "",
+  "license": "ISC",
+  "main": ".eleventy.js",
+  "scripts": {
+    "build": "eleventy",
+    "start": "eleventy --serve",
+    "watch": "eleventy --watch",
+    "debug": "DEBUG=*"
+  },
+  "devDependencies": {
+    "@11ty/eleventy": "^1.0.1",
+    "@11ty/eleventy-navigation": "^0.3.4"
+  },
+  "dependencies": {
+    "accordion-js": "^3.3.2",
+    "gsap": "npm:@gsap/shockingly@^3.11.3",
+    "moment": "^2.29.1",
+    "normalize.css": "^8.0.1",
+    "require-dir": "^1.2.0",
+    "swiper": "^8.3.2"
+  }
+}

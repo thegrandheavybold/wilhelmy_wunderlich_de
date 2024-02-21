@@ -1,0 +1,85 @@
+//Global Section Spacing
+@mixin mtop
+  margin-top: 120px
+  @media only screen and (max-width: 768px)
+    margin-top: 60px
+  @media only screen and (max-width: 430px)
+    margin-top: 40px
+
+@mixin mbottom
+  margin-bottom: 120px
+  @media only screen and (max-width: 768px)
+    margin-bottom: 60px
+  @media only screen and (max-width: 430px)
+    margin-bottom: 40px
+
+@mixin ptop
+  padding-top: 120px
+  @media only screen and (max-width: 768px)
+    padding-top: 60px
+  @media only screen and (max-width: 430px)
+    padding-top: 40px
+
+@mixin pbottom
+  padding-bottom: 120px
+  @media only screen and (max-width: 768px)
+    padding-bottom: 60px
+  @media only screen and (max-width: 430px)
+    padding-bottom: 40px
+
+
+//Typography Import & Setup
+@mixin font_regular
+  font-family: $font_regular
+  font-weight: 400
+  font-style: normal
+
+@mixin font_bold
+  font-family: $font_regular
+  font-weight: 700
+  font-style: normal
+
+// Typography rem output with px fallback
+@mixin font-size($sizeValue: 18 )
+  font-size: $sizeValue + px
+  font-size: ( 0.063 * $sizeValue ) + rem
+
+@mixin line-height($heightValue: 27)
+  line-height: $heightValue + px
+  line-height: (0.063 * $heightValue) + rem
+
+@mixin letter-spacing($spacingValue: 0)
+  letter-spacing: $spacingValue + px
+  letter-spacing: (0.063 * $spacingValue) + rem
+
+@mixin rhythm($sizeValue: 18, $heightValue: 27, $spacingValue: 0)
+  @include font-size($sizeValue)
+  @include line-height($heightValue)
+  @include letter-spacing($spacingValue)
+
+@mixin WidthHeight($remWidth: 108, $remHeight: 140)
+  width: ($remWidth + px)
+  width: (0.063 * $remWidth) + rem
+  height: ($remHeight + px)
+  height: (0.063 * $remHeight) + rem
+
+@mixin wrapper($wrapperHeight: 140, $wrapperWidth: 108 )
+  padding: ($wrapperHeight + px) ($wrapperWidth + px)
+  padding: (0.063 * $wrapperHeight) + rem (0.063 * $wrapperWidth) + rem
+
+
+@mixin clearfix()
+  content: ""
+  display: table
+  table-layout: fixed
+
+// Clear after (not all clearfix need this also)
+@mixin clearfix-after()
+  clear: both
+
+
+// Center block
+@mixin center-block
+  display: block
+  margin-left: auto
+  margin-right: auto

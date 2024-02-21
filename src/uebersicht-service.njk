@@ -1,0 +1,84 @@
+---
+title: Übersicht
+
+eleventyNavigation:
+  key: Übersicht Service
+  parent: Praxis
+  order: 1
+
+layout: "layouts/base.njk"
+
+seoTitle: Übersicht Service
+seoDescription:
+metaImage:
+---
+
+<section class="hero lax">
+
+  {% picture "praxis_hero.png", "Zahnarztpraxis und Team – Dr. Julia Wilhelmy-Wunderlich"%}
+
+</section><!-- .hero -->
+
+<section class="teaser_tiles_service">
+
+  <div class="wrapper">
+
+    <div class="item_1">
+      <span class="topline" data="fade-up">Wir. Für Sie.</span>
+      <p class="copy_intro" data="fade-up delay">Wir glauben an lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor.</p>
+    </div><!-- .item_1 -->
+
+    <div class="item_2">
+      <div data="fade-up">
+        {% picture "02_Szenen_0662_sq.jpg", "Zahnarztpraxis und Team – Dr. Julia Wilhelmy-Wunderlich"%}
+      </div>
+      <div>
+        <h3 data="fade-up">FAQ</h3>
+        <p class="copy" data="fade-up delay">Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor.</p>
+        <button class="btn btn_red" onclick="location.href='/faq'" type="button" data="fade-up">Mehr erfahren</button>
+      </div>
+
+    </div><!-- .item_2 -->
+
+    <div class="item_3">
+      <div data="fade-up">
+        {% picture "02_Szenen_0812_sq.jpg", "Zahnarztpraxis und Team – Dr. Julia Wilhelmy-Wunderlich"%}
+      </div>
+      <div>
+        <h3 data="fade-up">Terminvereinbarung</h3>
+        <p class="copy" data="fade-up delay">Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor.</p>
+        <button class="btn btn_red" onclick="location.href='/termin'" type="button" data="fade-up">Mehr erfahren</button>
+      </div>
+    </div><!-- .item_3 -->
+
+    <div class="item_4">
+      <div data="fade-up">
+        {% picture "02_Szenen_0699_sq.jpg", "Zahnarztpraxis und Team – Dr. Julia Wilhelmy-Wunderlich"%}
+      </div>
+      <div>
+        <h3 data="fade-up">Notfalltipps</h3>
+        <p class="copy" data="fade-up delay">Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor.</p>
+        <button class="btn btn_red" onclick="location.href='/notfalltipps'" type="button" data="fade-up">Mehr erfahren</button>
+      </div>
+    </div><!-- .item_4 -->
+
+    <div class="item_5">
+      <div data="fade-up">
+        {% picture "02_Szenen_0691_sq.jpg", "Zahnarztpraxis und Team – Dr. Julia Wilhelmy-Wunderlich"%}
+      </div>
+      <div>
+        <h3 data="fade-up">Links</h3>
+        <p class="copy" data="fade-up delay">Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor.</p>
+        <button class="btn btn_red" onclick="location.href='/links'" type="button" data="fade-up">Mehr erfahren</button>
+      </div>
+    </div><!-- .item_5 -->
+
+  </div><!-- .wrapper -->
+
+</section>
+
+
+{% include "partials/impressions_slider.njk" %}
+
+
+{% include "partials/languages.njk" %}

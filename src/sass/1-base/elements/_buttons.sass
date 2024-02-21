@@ -1,0 +1,65 @@
+button
+  cursor: pointer
+  @include font_bold
+  font-size: 0.889rem
+  line-height: 1.333rem
+  box-sizing: border-box
+  appearance: none !important
+  -webkit-appearance: none !important
+  -moz-appearance: none !important
+
+.btn
+  border-radius: 2rem
+  padding: .6rem 1rem .5rem 1rem
+
+.btn_blue
+  border: 3px solid $blue_gray30
+
+.btn_red
+  border: 3px solid $red_light50
+  background: $red_light50 border-box
+  color: $white
+
+  &:hover
+    border: 3px solid transparent
+    background: $red_gradient border-box
+    color: $white
+  &:active
+    border: 3px solid transparent
+    background: $red_dark
+    color: $white
+
+
+.btn_wht
+  border: 3px solid $white
+  background: $white
+  color: $red_light50
+
+.ww_top
+  width: 64px
+  height: 64px
+  display: block
+
+.ww_phone, .sticky_btn
+  color: $red_light50
+  background: $white
+  &:hover
+    border-color: $blue_gray40
+  &:active
+    border-color: $blue_gray50
+    color: $red_dark
+
+
+.ww_message
+  border: 3px solid $red_light50
+  background: $white
+  color: $red_light50
+  transition: background ease 1s
+  &:hover
+    border: 3px solid transparent
+    background: $red_gradient border-box
+    color: $white
+  &:active
+    border: 3px solid transparent
+    background: $red_dark
+    color: $white
