@@ -26,7 +26,8 @@
     </noscript>
 
     <!-- styles -->
-    <link rel="stylesheet" href="/style.css">
+    <link rel="preload" href="style.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+    <noscript><link rel="stylesheet" href="/style.css"></noscript>
 
     <!-- else -->
     <meta name="theme-color" content="#CB0B0F">
