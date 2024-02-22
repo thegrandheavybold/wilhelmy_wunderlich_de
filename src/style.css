@@ -3026,6 +3026,33 @@ section.offene-stellen .wrapper .item_1 h6, section.offene-stellen .wrapper .ite
   }
 }
 
+/*** Anamnese */
+section.anamnese {
+  background: #fff;
+  padding-top: 120px;
+  padding-bottom: 120px;
+}
+@media only screen and (max-width: 768px) {
+  section.anamnese {
+    padding-top: 60px;
+  }
+}
+@media only screen and (max-width: 430px) {
+  section.anamnese {
+    padding-top: 40px;
+  }
+}
+@media only screen and (max-width: 768px) {
+  section.anamnese {
+    padding-bottom: 60px;
+  }
+}
+@media only screen and (max-width: 430px) {
+  section.anamnese {
+    padding-bottom: 40px;
+  }
+}
+
 /*** home */
 section.intro {
   background: #fff;
