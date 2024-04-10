@@ -1725,7 +1725,7 @@ button.menu-toggle {
     background: #ECF2F0;
     position: absolute;
     width: 100vw;
-    height: 370px;
+    height: 360px;
     padding: 40px 0;
     transition: opacity ease 0.7s, translateY ease 0.4s, border-top ease 1.4s;
     will-change: opacity, translateY, border-top;
