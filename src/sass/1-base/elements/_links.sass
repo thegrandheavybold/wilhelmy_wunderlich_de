@@ -42,3 +42,15 @@ a.link:hover::before
 a.link.wht
 	&::before
 		background-color: $white
+
+
+a.multi
+	background-image: linear-gradient($red_light50, $red_light50)
+	background-position: 0% 100%
+	background-repeat: no-repeat
+	background-size: 100% 2px
+	transition: background-size .7s
+
+
+a.multi:hover, a.multi:focus 
+	background-size: 0% 2px
