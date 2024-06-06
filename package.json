@@ -1,9 +1,9 @@
 {
-  "name": "blank_page__dev_kit",
-  "description": "",
-  "keywords": [],
+  "name": "wilhelmy-wunderlich",
+  "description": "Zahnarztpraxis in Ratingen – build with 11ty and netlify",
+  "keywords": ["11ty, netlify"],
   "version": "1.0.0",
-  "author": "",
+  "author": "TheGrandHeavyBold – Christian Kriegsheim",
   "license": "ISC",
   "main": ".eleventy.js",
   "scripts": {
