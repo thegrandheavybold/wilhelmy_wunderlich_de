@@ -14,7 +14,7 @@
 
   .greetings
     position: relative
-    bottom: -49vw
+    bottom: -58vh
     margin: 0
     font-size: 14vw
     color: $white
@@ -23,7 +23,7 @@
     justify-content: center
   @media only screen and (max-width: 768px)
     .greetings
-      bottom: -49.5vw
+      bottom: -47vh
   @media only screen and (max-width: 375px)
     .greetings
       bottom: -51.5vw
@@ -32,9 +32,14 @@
   position: relative
   z-index: -1 !important
 
-.welcome::before
-  content: 'Willkommen.'
+.welcome::after
+  content: "Willkommen."
   font-size: 14vw
-  color: $white
+  color: #fff
   text-transform: uppercase
-  margin: 0 auto
+  position: absolute
+  bottom: 3vw
+  left: 50%
+  transform: translate(-50%, -50%)
+  display: block
+  text-align: center
