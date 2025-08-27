@@ -90,12 +90,26 @@ metaImage:
           <input type="text" id="nachname" name="Nachname" required/>
         </label>
 
-        <label for="Email">E-Mail-Adresse*
-          <input type="email" id="email" name="Email" required/>
+        <label for="email">E-Mail-Adresse*  
+          <input 
+            type="email" 
+            id="email" 
+            name="Email" 
+            pattern="^[^\s@]+@[^\s@]+\.[^\s@]+$" 
+            title="Bitte geben Sie eine gültige E-Mail-Adresse ein, z. B. name@beispiel.de" 
+            required
+          />
         </label>
 
         <label for="Telefon">Telefon (zur Terminbestätigung)*
-          <input type="tel" id="phone" name="Telefon" pattern="[0-9]" required/>
+          <input 
+            type="tel" 
+            id="phone" 
+            name="Telefon" 
+            pattern="^\+?[0-9]{6,15}$" 
+            title="Nur Ziffern, optional mit +49, z. B. +492102123456." 
+            required
+          />
         </label>
 
       </fieldset>
