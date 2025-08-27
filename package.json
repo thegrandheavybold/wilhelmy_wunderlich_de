@@ -7,12 +7,12 @@
   "version": "1.0.0",
   "author": "TheGrandHeavyBold – Christian Kriegsheim",
   "license": "ISC",
-  "main": ".eleventy.js",
+  "main": ".eleventy.mjs",
+  "type": "module",
   "scripts": {
-    "build": "eleventy",
-    "start": "eleventy --serve",
-    "watch": "eleventy --watch",
-    "debug": "DEBUG=*"
+    "build": "npx @11ty/eleventy",
+    "start": "npx @11ty/eleventy --serve --quiet",
+    "debug": "cross-env DEBUG=Eleventy* npx @11ty/eleventy"
   },
   "devDependencies": {
     "@11ty/eleventy": "^3.1.1",
