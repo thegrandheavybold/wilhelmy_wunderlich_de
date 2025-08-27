@@ -50,108 +50,106 @@ metaImage:
 
   <div class="wrapper">
 
-    <form id="termin-form" class="sxty" name="termin_anfrage"  method="POST" netlify data-netlify-honeypot="true" data="fade-up">
-      <input type="hidden" name="form-name" value="termin">
-      
-      <fieldset class="prefer">
-        <label for="Behandlung">Bei welcher Ärztin wünschen Sie die Behandlung?*
-        <select id="arzt" name="Behandlung" required>
-          <option>Bitte auswählen</option>
-          <option value="Dr. Julia Wilhelmy-Wunderlich">Dr. Julia Wilhelmy-Wunderlich</option>
-          <option value="Dr. Verena Gaster">Dr. Verena Gaster</option>
-        </select>
-        </label>
-      </fieldset>
+    <form
+  id="termin-form"
+  class="sxty"
+  name="termin_anfrage"
+  method="POST"
+  data-netlify="true"
+  netlify-honeypot="bot-field"
+  data="fade-up"
+>
+  <!-- Pflicht: form-name muss identisch zum Formnamen sein -->
+  <input type="hidden" name="form-name" value="termin_anfrage" />
 
-      <fieldset class="appointment">
-        <label for="Termin">Wunschdatum*
-          <input type="date" id="date" name="Termin" required>
-        </label>
-        <label for="Uhrzeit">Uhrzeit*
-          <input type="time" id="time" name="Uhrzeit" required>
-        </label>
-      </fieldset>
+  <!-- Honeypot (Spam-Schutz) -->
+  <div style="display:none;">
+    <label>Nicht ausfüllen: <input name="bot-field" /></label>
+  </div>
 
-      <br><br>
+  <fieldset class="prefer">
+    <label for="arzt">Bei welcher Ärztin wünschen Sie die Behandlung?*</label>
+    <select id="arzt" name="Behandlung" required>
+      <option value="" disabled selected>Bitte auswählen</option>
+      <option value="Dr. Julia Wilhelmy-Wunderlich">Dr. Julia Wilhelmy-Wunderlich</option>
+      <option value="Dr. Verena Gaster">Dr. Verena Gaster</option>
+    </select>
+  </fieldset>
 
-      <fieldset class="client_contact">
+  <fieldset class="appointment">
+    <label for="date">Wunschdatum*</label>
+    <input type="date" id="date" name="Termin" required>
 
-        <label for="Anrede">Anrede*
-          <select id="anrede" name="Anrede" required>
-            <option value="Frau">Frau</option>
-            <option value="Herr">Herr</option>
-          </select>
-        </label>
+    <label for="time">Uhrzeit*</label>
+    <input type="time" id="time" name="Uhrzeit" required>
+  </fieldset>
 
-        <label for="Vorname">Vorname*
-          <input type="text" id="vorname" name="Vorname" required/>
-        </label>
+  <br><br>
 
-        <label for="Nachname">Nachname*
-          <input type="text" id="nachname" name="Nachname" required/>
-        </label>
+  <fieldset class="client_contact">
+    <label for="anrede">Anrede*</label>
+    <select id="anrede" name="Anrede" required>
+      <option value="Frau">Frau</option>
+      <option value="Herr">Herr</option>
+    </select>
 
-        <label for="email">E-Mail-Adresse*  
-          <input 
-            type="email" 
-            id="email" 
-            name="Email" 
-            pattern="^[^\s@]+@[^\s@]+\.[^\s@]+$" 
-            title="Bitte geben Sie eine gültige E-Mail-Adresse ein, z. B. name@beispiel.de"
-            placeholder="name@beispiel.de"
-            required
-          />
-        </label>
+    <label for="vorname">Vorname*</label>
+    <input type="text" id="vorname" name="Vorname" required />
 
-        <label for="Telefon">Telefon (zur Terminbestätigung)*
-          <input 
-            type="tel" 
-            id="phone" 
-            name="Telefon" 
-            pattern="^\+?[0-9]{6,15}$" 
-            title="Nur Ziffern, optional mit +49, z. B. +492102123456."
-            placeholder="+492102123456" 
-            required
-          />
-        </label>
+    <label for="nachname">Nachname*</label>
+    <input type="text" id="nachname" name="Nachname" required />
 
-      </fieldset>
+    <label for="email">E-Mail-Adresse*</label>
+    <input 
+      type="email" 
+      id="email" 
+      name="Email" 
+      pattern="^[^\s@]+@[^\s@]+\.[^\s@]+$" 
+      title="Bitte geben Sie eine gültige E-Mail-Adresse ein, z. B. name@beispiel.de"
+      placeholder="name@beispiel.de"
+      required
+    />
 
+    <label for="phone">Telefon (zur Terminbestätigung)*</label>
+    <input 
+      type="tel" 
+      id="phone" 
+      name="Telefon" 
+      pattern="^\+?[0-9]{6,15}$" 
+      title="Nur Ziffern, optional mit +49, z. B. +492102123456."
+      placeholder="+492102123456" 
+      required
+    />
+  </fieldset>
 
-      <fieldset class="message">
+  <fieldset class="message">
+    <label for="subject">Was können wir für Sie tun?*</label>
+    <select id="subject" name="Betreff" required>
+      <option value="" disabled selected>Bitte auswählen</option>
+      <option value="Beschwerden">Beschwerden</option>
+      <option value="Kontrolle/Neuvorstellung">Kontrolle/Neuvorstellung</option>
+      <option value="Zahnreinigung">Zahnreinigung</option>
+      <option value="Sonstiges">Sonstiges</option>
+    </select>
 
-        <label for="Betreff">Was können wir für Sie tun?*
-          <select id="subject" name="Betreff" required>
-            <option disabled selected value>Bitte auswählen</option>
-            <option value="">Beschwerden</option>
-            <option value="">Kontrolle/Neuvorstellung</option>
-            <option value="">Zahnreinigung</option>
-            <option value="">Sonstiges</option>
-          </select>
-        </label>
+    <label for="message">Anmerkungen</label>
+    <textarea id="message" name="message"></textarea>
+  </fieldset>
 
-        <label for="message">Anmerkungen
-          <textarea id="message" name="message"></textarea>
-        </label>
+  <span>
+    <p>* Pflichtfelder</p>
+    <button class="btn btn_red" type="submit" data="fade-up">Terminanfrage senden</button>
+  </span>
+</form>
 
-      </fieldset>
+<!-- Success Message -->
+<div id="success-message" class="sxty hidden" aria-live="polite">
+  <h6>Vielen Dank!</h6>
+  <p data="fade-up delay">
+    Ihr Terminwunsch ist bei uns angekommen. Wir melden uns zeitnah bei Ihnen.
+  </p>
+</div>
 
-      <span>
-
-        <p>* Pflichtfelder</p>
-
-        <button class="btn btn_red" type="submit" data="fade-up">Terminanfrage senden</button>
-
-      </span>
-
-    </form>
-
-    <div id="success-message" class="sxty hidden">
-      <h6>Vielen Dank!</h6>
-      <p data="fade-up delay">
-        Ihr Terminwunsch ist bei uns angekommen. Wir melden uns zeitnah bei Ihnen.
-      </p>
-    </div>
 
   </div><!-- .wrapper -->
 

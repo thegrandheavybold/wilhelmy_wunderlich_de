@@ -191,24 +191,41 @@ const oov = gsap.utils.toArray('.oov');
 });
 
 //Form Success Message
-document.getElementById("termin-form").addEventListener("submit", function(e) {
-  e.preventDefault();
-  const form = e.target;
-  const data = new FormData(form);
+  const form = document.getElementById("termin-form");
+  const successMessage = document.getElementById("success-message");
 
-  fetch("/", {
-    method: "POST",
-    body: data,
-  }).then(() => {
-    // Formular ausblenden
-    form.style.display = "none";
+  function toUrlEncoded(formData) {
+    return new URLSearchParams(formData).toString();
+  }
 
-    // Success-Message einblenden
-    const successMessage = document.getElementById("success-message");
-    successMessage.classList.remove("hidden");
-    successMessage.style.display = "block";
+  form.addEventListener("submit", async function (e) {
+    e.preventDefault();
 
-    // Automatisch dahin scrollen
-    successMessage.scrollIntoView({ behavior: "smooth", block: "center" });
-  }).catch(() => alert("Fehler beim Absenden, bitte versuchen Sie es erneut."));
-});
+    const data = new FormData(form);
+
+    // Sicherheit: form-name immer mitsenden
+    if (!data.has("form-name")) {
+      data.append("form-name", form.getAttribute("name"));
+    }
+
+    try {
+      await fetch("/", {
+        method: "POST",
+        headers: { "Content-Type": "application/x-www-form-urlencoded" },
+        body: toUrlEncoded(data),
+      });
+
+      // Formular ausblenden
+      form.style.display = "none";
+
+      // Success anzeigen + in den Viewport scrollen
+      successMessage.classList.remove("hidden");
+      successMessage.style.display = "block";
+      successMessage.scrollIntoView({ behavior: "smooth", block: "center" });
+
+    } catch (err) {
+      alert("Fehler beim Absenden, bitte versuchen Sie es erneut.");
+      console.error(err);
+    }
+  });
+
