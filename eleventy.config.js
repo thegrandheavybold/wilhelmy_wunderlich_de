@@ -2,6 +2,7 @@
 
 import moment from "moment";
 import eleventyNavigationPlugin from "@11ty/eleventy-navigation";
+import htmlmin from "html-minifier-terser";
 
 import picture from "./src/js/picture.js";
 
@@ -25,6 +26,22 @@ export default function (eleventyConfig) {
 
   // Shortcodes for Pictures
   eleventyConfig.addShortcode("picture", picture);
+
+  // HTML-Minify Transform
+  eleventyConfig.addTransform("htmlmin", async (content, outputPath) => {
+    if (outputPath && outputPath.endsWith(".html")) {
+      return await htmlmin.minify(content, {
+        collapseWhitespace: true,
+        removeComments: true,
+        useShortDoctype: true,
+        removeRedundantAttributes: true,
+        removeEmptyAttributes: true,
+        minifyCSS: true,
+        minifyJS: true
+      });
+    }
+    return content;
+  });
 
   // Config Object
   return {
