@@ -16,6 +16,8 @@ export default function picture(ImageName, ImageAlt) {
 
               src="/assets/img/1200/${ImageName}"
               alt="${ImageAlt}"
+              loading="lazy" 
+              decoding="async"
             />
           </picture>`;
 }
