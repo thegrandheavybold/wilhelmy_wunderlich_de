@@ -50,8 +50,9 @@ metaImage:
 
   <div class="wrapper">
 
-    <form class="sxty" name="termin_anfrage" method="POST" data-netlify="true" data="fade-up">
-
+    <form id="termin-form" class="sxty" name="termin_anfrage"  method="POST" netlify data-netlify-honeypot="true" data="fade-up">
+      <input type="hidden" name="form-name" value="termin">
+      
       <fieldset class="prefer">
         <label for="Behandlung">Bei welcher Ärztin wünschen Sie die Behandlung?*
         <select id="arzt" name="Behandlung" required>
@@ -96,7 +97,8 @@ metaImage:
             id="email" 
             name="Email" 
             pattern="^[^\s@]+@[^\s@]+\.[^\s@]+$" 
-            title="Bitte geben Sie eine gültige E-Mail-Adresse ein, z. B. name@beispiel.de" 
+            title="Bitte geben Sie eine gültige E-Mail-Adresse ein, z. B. name@beispiel.de"
+            placeholder="name@beispiel.de"
             required
           />
         </label>
@@ -107,7 +109,8 @@ metaImage:
             id="phone" 
             name="Telefon" 
             pattern="^\+?[0-9]{6,15}$" 
-            title="Nur Ziffern, optional mit +49, z. B. +492102123456." 
+            title="Nur Ziffern, optional mit +49, z. B. +492102123456."
+            placeholder="+492102123456" 
             required
           />
         </label>
@@ -142,6 +145,13 @@ metaImage:
       </span>
 
     </form>
+
+    <div id="success-message" class="sxty hidden">
+      <h6>Vielen Dank!</h6>
+      <p data="fade-up delay">
+        Ihr Terminwunsch ist bei uns angekommen. Wir melden uns zeitnah bei Ihnen.
+      </p>
+    </div>
 
   </div><!-- .wrapper -->
 

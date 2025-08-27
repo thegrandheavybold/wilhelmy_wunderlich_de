@@ -189,3 +189,26 @@ const oov = gsap.utils.toArray('.oov');
       }
     })
 });
+
+//Form Success Message
+document.getElementById("termin-form").addEventListener("submit", function(e) {
+  e.preventDefault();
+  const form = e.target;
+  const data = new FormData(form);
+
+  fetch("/", {
+    method: "POST",
+    body: data,
+  }).then(() => {
+    // Formular ausblenden
+    form.style.display = "none";
+
+    // Success-Message einblenden
+    const successMessage = document.getElementById("success-message");
+    successMessage.classList.remove("hidden");
+    successMessage.style.display = "block";
+
+    // Automatisch dahin scrollen
+    successMessage.scrollIntoView({ behavior: "smooth", block: "center" });
+  }).catch(() => alert("Fehler beim Absenden, bitte versuchen Sie es erneut."));
+});

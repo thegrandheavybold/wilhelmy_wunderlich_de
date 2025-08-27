@@ -1107,6 +1107,10 @@ fieldset.message label:nth-child(2), fieldset.message #message {
     width: 100%;
   }
 }
+.hidden {
+  display: none;
+}
+
 /* Typography Styles*/
 /* ========================================================================== */
 body,
