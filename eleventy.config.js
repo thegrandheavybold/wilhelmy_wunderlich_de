@@ -4,6 +4,7 @@ import moment from "moment";
 import eleventyNavigationPlugin from "@11ty/eleventy-navigation";
 
 import picture from "./src/js/picture.js";
+import heroImage from "./src/js/heroImage.js";
 
 export default function (eleventyConfig) {
   // Passthrough Copies
@@ -25,7 +26,7 @@ export default function (eleventyConfig) {
 
   // Shortcodes for Pictures
   eleventyConfig.addShortcode("picture", picture);
-  
+  eleventyConfig.addShortcode("heroImage", heroImage);
 
   // Config Object
   return {

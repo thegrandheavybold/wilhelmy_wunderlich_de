@@ -1,5 +1,5 @@
 export default {
-  url: "https://www.zahnaerzte-in-ratingen.de/",
+  url: "https://www.zahnaerzte-in-ratingen.de",
   baseUrl: "/",
   name: "Wilhelmy-Wunderlich",
   author: "Christian Kriegsheim",
