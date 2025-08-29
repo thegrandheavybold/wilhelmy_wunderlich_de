@@ -22,6 +22,17 @@
   to = "/.netlify/images?url=/assets/img/:file&width=:width"
   status = 200
 
+[[redirects]]
+  from = "/kontakt"
+  to = "/kontakt-anfahrt"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/arzte"
+  to = "/team"
+  status = 301
+  force = true
 
 
 [[plugins]]
