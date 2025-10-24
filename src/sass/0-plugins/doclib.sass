@@ -1,0 +1,25 @@
+.doclib
+  position: fixed
+  top: 70vh
+  right: 0
+  display: block
+  text-align: center
+  background-color: #107aca
+  color: #fff
+  font-size: 14px
+  width: 80px
+  border-radius: 4px 0 0 4px
+  padding: 5px
+  z-index: 999
+  opacity: 0.85
+  box-shadow: 1px 2px 4px rgba(0, 0, 0, 0.2)
+  line-height: 1.4
+
+  &:hover
+    opacity: 1
+    box-shadow: 2px 3px 6px rgba(0, 0, 0, 0.3)
+
+// Repositioning for Mobile
+@media only screen and (max-width: 768px)
+  .doclib
+    top: 200px
