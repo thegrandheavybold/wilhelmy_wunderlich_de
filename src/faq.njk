@@ -11,10 +11,12 @@ layout: "layouts/base.njk"
 seoTitle: FAQ
 seoDescription: "Häufige Fragen schnell beantwortet: Unser FAQ-Bereich bietet hilfreiche Infos rund um Ihren Besuch beim Zahnarzt in Ratingen."
 metaImage: 1200/faq_hero_01.jpg
+heroImageName: faq_hero_01.jpg
+heroImageAlt: Zahnarztpraxis und Team – Dr. Julia Wilhelmy-Wunderlich
 ---
 <section class="hero lax">
 
-  {% heroImage "faq_hero_01.jpg", "Zahnarztpraxis und Team – Dr. Julia Wilhelmy-Wunderlich"%}
+  {% heroImage heroImageName, heroImageAlt %}
 
 </section><!-- .hero -->
 
@@ -23,9 +25,11 @@ metaImage: 1200/faq_hero_01.jpg
   <div class="wrapper">
 
     <div class="intro_content sxty">
-      <span class="topline" data="fade-up">Service</span>
+      <span class="topline" data-animate="fade-up">Service</span>
 
-      <p class="copy_intro" data="fade-up delay">Fragen? Antworten.</p>
+      <h1 class="copy_intro page_title" data-animate="fade-up" data-delay="0.2">{{ title }}</h1>
+
+      <p class="copy" data-animate="fade-up">Fragen? Antworten.</p>
 
     </div><!-- .item_1 -->
 
@@ -37,9 +41,9 @@ metaImage: 1200/faq_hero_01.jpg
 
   <div class="wrapper">
 
-    <div class="item_1 sxty" data="fade-up">
+    <div class="item_1 sxty" data-animate="fade-up">
 
-      <p>Gerne nehmen wir uns in einem persönlichen Gespräch Zeit für all ihre Fragen.
+      <p>Gerne nehmen wir uns in einem persönlichen Gespräch Zeit für all Ihre Fragen.
         <br>Für schnelle Antworten haben wir hier die häufigsten Fragen zusammengestellt.
       </p>
 
@@ -50,7 +54,7 @@ metaImage: 1200/faq_hero_01.jpg
 
       <div class="accordion-container">
 
-        <div class="ac" data="fade-up">
+        <div class="ac" data-animate="fade-up">
           <h6 class="ac-header">
             <button type="button" class="ac-trigger">Gibt es Parkmöglichkeiten bei der Praxis?</button>
           </h6>
@@ -61,18 +65,18 @@ metaImage: 1200/faq_hero_01.jpg
           </div>
         </div>
 
-        <div class="ac" data="fade-up">
+        <div class="ac" data-animate="fade-up">
           <h6 class="ac-header">
             <button type="button" class="ac-trigger">Was mache ich, wenn ich meinen Termin nicht wahrnehmen kann oder deutlich zu spät komme?</button>
           </h6>
           <div class="ac-panel">
             <p class="ac-text">
-              Da wir eine Terminpraxis sind, melden Sie sich bitte rechtzeitig telefonisch, sobald sie abschätzen können, dass Sie den Termin nicht wahrnehmen oder pünktlich sein können.  Wir besprechen daraufhin ganz individuell das weitere Vorgehen. Nur so können wir gewährleisten, dass ein reibungsloser Ablauf mit einem guten Zeitmanagement und kurzen Wartezeiten in unserer Praxis stattfindet. 
+              Da wir eine Terminpraxis sind, melden Sie sich bitte rechtzeitig telefonisch, sobald Sie abschätzen können, dass Sie den Termin nicht wahrnehmen oder pünktlich sein können. Wir besprechen daraufhin ganz individuell das weitere Vorgehen. Nur so können wir gewährleisten, dass ein reibungsloser Ablauf mit einem guten Zeitmanagement und kurzen Wartezeiten in unserer Praxis stattfindet.
             </p>
           </div>
         </div>
 
-        <div class="ac" data="fade-up">
+        <div class="ac" data-animate="fade-up">
           <h6 class="ac-header">
             <button type="button" class="ac-trigger">Darf ich im Falle von Beschwerden ohne Termin kommen?</button>
           </h6>
@@ -84,7 +88,7 @@ metaImage: 1200/faq_hero_01.jpg
           </div>
         </div>
 
-        <div class="ac" data="fade-up">
+        <div class="ac" data-animate="fade-up">
           <h6 class="ac-header">
             <button type="button" class="ac-trigger">Besteht die Möglichkeit einer Finanzierung meiner Rechnung?</button>
           </h6>
@@ -95,7 +99,7 @@ metaImage: 1200/faq_hero_01.jpg
           </div>
         </div>
 
-        <div class="ac" data="fade-up">
+        <div class="ac" data-animate="fade-up">
           <h6 class="ac-header">
             <button type="button" class="ac-trigger">Ab wann sollte mein Kind zur Kontrolle in die Praxis kommen?</button>
           </h6>
@@ -106,7 +110,7 @@ metaImage: 1200/faq_hero_01.jpg
           </div>
         </div>
 
-        <div class="ac" data="fade-up">
+        <div class="ac" data-animate="fade-up">
           <h6 class="ac-header">
             <button type="button" class="ac-trigger">Wie lange darf ich nach einer Behandlung nichts essen oder trinken?</button>
           </h6>
@@ -117,12 +121,12 @@ metaImage: 1200/faq_hero_01.jpg
               <br><br> 
               Neue Füllungen und eingesetzter Zahnersatz sind unmittelbar nach der Behandlung belastungsfähig. 
               <br><br>
-              Ihre behandelnde Zahnärztin/ihr behandelnder Zahnarzt klärt sie nach jeder Behandlung über die Verhaltensweisen nach dem Besuch bei uns auf. 
+              Ihre behandelnde Zahnärztin/Ihr behandelnder Zahnarzt klärt Sie nach jeder Behandlung über die Verhaltensweisen nach dem Besuch bei uns auf.
             </p>
           </div>
         </div>
 
-        <div class="ac" data="fade-up">
+        <div class="ac" data-animate="fade-up">
           <h6 class="ac-header">
             <button type="button" class="ac-trigger">Was mache ich im Falle einer Nachblutung nach einem chirurgischen Eingriff?</button>
           </h6>
@@ -140,7 +144,7 @@ metaImage: 1200/faq_hero_01.jpg
           </div>
         </div>
 
-        <div class="ac" data="fade-up">
+        <div class="ac" data-animate="fade-up">
           <h6 class="ac-header">
             <button type="button" class="ac-trigger">Ich habe regelmäßiges Zahnfleischbluten. Was kann ich tun?</button>
           </h6>
@@ -154,7 +158,7 @@ metaImage: 1200/faq_hero_01.jpg
           </div>
         </div>
 
-        <div class="ac" data="fade-up">
+        <div class="ac" data-animate="fade-up">
           <h6 class="ac-header">
             <button type="button" class="ac-trigger">An wen wende ich mich, wenn ich außerhalb der Praxiszeiten starke Schmerzen habe?</button>
           </h6>
@@ -165,13 +169,13 @@ metaImage: 1200/faq_hero_01.jpg
           </div>
         </div>
 
-        <div class="ac" data="fade-up">
+        <div class="ac" data-animate="fade-up">
           <h6 class="ac-header">
             <button type="button" class="ac-trigger">Was mache ich, wenn mir ein Zahn abbricht?</button>
           </h6>
           <div class="ac-panel">
             <p class="ac-text">
-              Bei Beschwerden wie beispielsweise einem abgebrochenen Zahn können sie uns während der Sprechzeiten telefonisch erreichen und wir finden einen zeitnahen Termin, um sie zu versorgen. Außerhalb unserer Sprechzeiten erreichen Sie den Zahnärztlichen Notdienst in dringenden Notfällen unter folgender Telefonnummer: 0180 5986700
+              Bei Beschwerden wie beispielsweise einem abgebrochenen Zahn können Sie uns während der Sprechzeiten telefonisch erreichen und wir finden einen zeitnahen Termin, um Sie zu versorgen. Außerhalb unserer Sprechzeiten erreichen Sie den Zahnärztlichen Notdienst in dringenden Notfällen unter folgender Telefonnummer: 0180 5986700
             </p>
           </div>
         </div>

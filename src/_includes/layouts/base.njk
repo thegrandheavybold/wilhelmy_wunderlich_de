@@ -1,12 +1,27 @@
 <!DOCTYPE html>
 <html lang="de" dir="ltr" id="{{ page.fileSlug }}">
   <head>
+    {% set pageTitle = seoTitle or title or site.metaTitle %}
+    {% if pageTitle == site.metaTitle %}
+      {% set documentTitle = site.metaTitle %}
+    {% else %}
+      {% set documentTitle = pageTitle ~ " · " ~ site.metaTitle %}
+    {% endif %}
+    {% set pageDescription = seoDescription or site.metaDescription %}
+    {% set pageImage = metaImage or site.metaImage %}
+    {% set pageUrl = site.url ~ page.url %}
+    {% set canonicalUrl = canonical or pageUrl %}
+    {% set robotsValue = robots or "index,follow" %}
+    {% set ogTypeValue = ogType or "website" %}
+    {% set pageImageUrl = site.url ~ "/assets/img/" ~ pageImage %}
     <meta charset="utf-8">
-    <title>{{seoTitle}} · {{ site.metaTitle }}</title>
-    <meta name="description" content="{{seoDescription}}">
+    <title>{{ documentTitle }}</title>
+    <meta name="description" content="{{ pageDescription }}">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-
+    <meta name="robots" content="{{ robotsValue }}">
+    <meta name="theme-color" content="{{ site.themeColor }}">
+    <link rel="canonical" href="{{ canonicalUrl }}">
 
     <!-- favicon -->
     <link rel="icon" href="/assets/fav/favicon.ico" sizes="any">
@@ -26,21 +41,72 @@
     </noscript>
 
     <!-- styles -->
-    <link rel="preload" as="style" href="/style.css">
-    <link rel="stylesheet" href="/style.css">
-
-    <!-- else -->
-    <meta name="theme-color" content="#CB0B0F">
+    <link rel="preload" as="style" href="{{ assets.styles }}">
+    <link rel="stylesheet" href="{{ assets.styles }}">
+    {% if heroImageName %}
+      <link
+        rel="preload"
+        as="image"
+        href="/assets/img/1600/{{ heroImageName }}"
+        imagesrcset="/assets/img/400/{{ heroImageName }} 400w, /assets/img/800/{{ heroImageName }} 800w, /assets/img/1200/{{ heroImageName }} 1200w, /assets/img/1600/{{ heroImageName }} 1600w"
+        imagesizes="100vw"
+        fetchpriority="high"
+      >
+    {% endif %}
 
     <!-- open graph -->
-    <meta property="og:type" content="article">
-    <meta property="og:title" content="{{ seoTitle }} · {{ site.metaTitle }}">
-    <meta property="og:image" content="{{ site.url }}/assets/img/{{ metaImage }}">
-    <meta property="og:image:secure_url" content="{{ site.url }}/assets/img/{{ metaImage }}">
+    <meta property="og:locale" content="{{ site.locale }}">
+    <meta property="og:type" content="{{ ogTypeValue }}">
+    <meta property="og:title" content="{{ documentTitle }}">
+    <meta property="og:image" content="{{ pageImageUrl }}">
+    <meta property="og:image:secure_url" content="{{ pageImageUrl }}">
     <meta property="og:site_name" content="{{ site.name }}">
-    <meta property="og:description" content="{{ seoDescription }}">
-    <meta property="og:url" content="{{ site.url }}{{ page.url }}">
+    <meta property="og:description" content="{{ pageDescription }}">
+    <meta property="og:url" content="{{ canonicalUrl }}">
 
+    <!-- twitter -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="{{ documentTitle }}">
+    <meta name="twitter:description" content="{{ pageDescription }}">
+    <meta name="twitter:image" content="{{ pageImageUrl }}">
+
+    <script type="application/ld+json">
+      {{ {
+        "@context": "https://schema.org",
+        "@type": "WebSite",
+        "@id": site.url ~ "/#website",
+        "url": site.url,
+        "name": site.metaTitle,
+        "inLanguage": "de-DE"
+      } | json | safe }}
+    </script>
+    <script type="application/ld+json">
+      {{ {
+        "@context": "https://schema.org",
+        "@type": "Dentist",
+        "@id": site.url ~ "/#practice",
+        "name": site.metaTitle,
+        "url": site.url,
+        "image": pageImageUrl,
+        "logo": site.url ~ site.logo,
+        "telephone": site.contact.telephone,
+        "faxNumber": site.contact.faxNumber,
+        "email": site.contact.email,
+        "address": {
+          "@type": "PostalAddress",
+          "streetAddress": site.address.streetAddress,
+          "postalCode": site.address.postalCode,
+          "addressLocality": site.address.addressLocality,
+          "addressCountry": site.address.addressCountry
+        },
+        "geo": {
+          "@type": "GeoCoordinates",
+          "latitude": site.geo.latitude,
+          "longitude": site.geo.longitude
+        },
+        "openingHoursSpecification": site.openingHours
+      } | json | safe }}
+    </script>
 
   </head>
 
@@ -267,7 +333,7 @@
       {%- include "partials/footer.njk" -%}
 
 
-      <script type="module" src="/js/main-min.js" defer></script>
+      <script type="module" src="{{ assets.app }}"></script>
       <svg style="width:0;height:0;position:absolute;" aria-hidden="true" focusable="false">
         <linearGradient id="darkred__hover" x1="0" y1="0.5" x2="1" y2="0.5">
           <stop offset="0%" stop-color="#991105"/>

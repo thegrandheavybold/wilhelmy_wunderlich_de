@@ -11,11 +11,13 @@ layout: "layouts/base.njk"
 seoTitle: Übersicht Praxis
 seoDescription: "Ihre Zahnarztpraxis in Ratingen: Ästhetische Zahnmedizin & Parodontologie in einem freundlichen, fürsorglichen Umfeld für Ihr Wohlbefinden."
 metaImage: 1200/praxis_hero_01.jpg
+heroImageName: praxis_hero_01.jpg
+heroImageAlt: Zahnarztpraxis und Team – Dr. Julia Wilhelmy-Wunderlich
 ---
 
 <section class="hero lax">
 
-  {% heroImage "praxis_hero_01.jpg", "Zahnarztpraxis und Team – Dr. Julia Wilhelmy-Wunderlich"%}
+  {% heroImage heroImageName, heroImageAlt %}
 
 </section><!-- .hero -->
 
@@ -24,42 +26,42 @@ metaImage: 1200/praxis_hero_01.jpg
   <div class="wrapper">
 
     <div class="item_1">
-      <span class="topline" data="fade-up">Wir. Für Sie.</span>
-      <p class="copy_intro" data="fade-up delay">Ein Lächeln verbindet uns mit unserem Gegenüber. Wir wollen Ihnen zu einem strahlenden Lächeln verhelfen.</p>
+      <span class="topline" data-animate="fade-up">Wir. Für Sie.</span>
+      <h1 class="copy_intro" data-animate="fade-up" data-delay="0.2">Ein Lächeln verbindet uns mit unserem Gegenüber. Wir wollen Ihnen zu einem strahlenden Lächeln verhelfen.</h1>
     </div><!-- .item_1 -->
 
     <div class="item_2">
-      <div data="fade-up">
+      <div data-animate="fade-up">
         {% picture "praxis_teaser_01.jpg", "Zahnarztpraxis und Team – Dr. Julia Wilhelmy-Wunderlich"%}
       </div>
       <div>
-        <h3 data="fade-up">Zahnärztinnen & Team</h3>
-        <p class="copy" data="fade-up delay">Als Team mit Leidenschaft dabei, Zahnmedizin ist mehr als nur ein Beruf für uns. Lernen Sie uns gerne kennen.</p>
-        <button class="btn btn_red" onclick="location.href='/team'" type="button" data="fade-up">Mehr erfahren</button>
+        <h3 data-animate="fade-up">Zahnärztinnen & Team</h3>
+        <p class="copy" data-animate="fade-up" data-delay="0.2">Als Team mit Leidenschaft dabei, Zahnmedizin ist mehr als nur ein Beruf für uns. Lernen Sie uns gerne kennen.</p>
+        <a class="btn btn_red" href="/team" data-animate="fade-up">Mehr erfahren</a>
       </div>
 
     </div><!-- .item_2 -->
 
 
     <div class="item_3">
-      <div data="fade-up">
+      <div data-animate="fade-up">
         {% picture "praxis_teaser_03.jpg", "Zahnarztpraxis und Team – Dr. Julia Wilhelmy-Wunderlich"%}
       </div>
       <div>
-        <h3 data="fade-up">Ausstattung</h3>
-        <p class="copy" data="fade-up delay">Verschaffen Sie sich einen Überblick über die Ausstattungs-Highlights unserer Praxis.</p>
-        <button class="btn btn_red" onclick="location.href='/ausstattung'" type="button" data="fade-up">Mehr erfahren</button>
+        <h3 data-animate="fade-up">Ausstattung</h3>
+        <p class="copy" data-animate="fade-up" data-delay="0.2">Verschaffen Sie sich einen Überblick über die Ausstattungs-Highlights unserer Praxis.</p>
+        <a class="btn btn_red" href="/ausstattung" data-animate="fade-up">Mehr erfahren</a>
       </div>
     </div><!-- .item_3 -->
 
     <div class="item_4">
-      <div data="fade-up">
+      <div data-animate="fade-up">
         {% picture "praxis_teaser_04.jpg", "Zahnarztpraxis und Team – Dr. Julia Wilhelmy-Wunderlich"%}
       </div>
       <div>
-        <h3 data="fade-up">Offene Stellen</h3>
-        <p class="copy" data="fade-up delay">Sie wollen Teil unseres Teams werden, dann bewerben Sie sich doch bei uns.</p>
-        <button class="btn btn_red" onclick="location.href='/offene-stellen'" type="button" data="fade-up">Mehr erfahren</button>
+        <h3 data-animate="fade-up">Offene Stellen</h3>
+        <p class="copy" data-animate="fade-up" data-delay="0.2">Sie wollen Teil unseres Teams werden, dann bewerben Sie sich doch bei uns.</p>
+        <a class="btn btn_red" href="/offene-stellen" data-animate="fade-up">Mehr erfahren</a>
       </div>
     </div><!-- .item_4 -->
 

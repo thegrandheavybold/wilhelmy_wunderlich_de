@@ -1,11 +1,15 @@
 [build]
-  CI= "npm run build"
+  command = "npm run build"
   publish = "dist"
-  NODE_ENV = "20.11.0"
+
+  [build.environment]
+    NODE_VERSION = "20.11.0"
 
 
 [dev]
-  CI= "npm run build"
+  publish = "dist"
+  port = 8888
+  autoLaunch = false
 
 
 [build.processing.html]
@@ -18,7 +22,7 @@
   status = 200
 
 [[redirects]]
-  from = "assets/img/:width/:file"
+  from = "/assets/img/:width/:file"
   to = "/.netlify/images?url=/assets/img/:file&width=:width"
   status = 200
 

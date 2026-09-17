@@ -10,11 +10,13 @@ layout: "layouts/base.njk"
 seoTitle: Kontakt & Anfahrt
 seoDescription: "Kontakt & Anfahrt zu unserer Zahnarztpraxis in Ratingen: Adresse, Telefonnummer, E-Mail und Anreiseinfos mit Auto oder öffentlichen Verkehrsmitteln."
 metaImage: 1200/kontakt_hero_01.jpg
+heroImageName: kontakt_hero_01.jpg
+heroImageAlt: Zahnarztpraxis und Team – Dr. Julia Wilhelmy-Wunderlich
 ---
 
 <section class="hero lax">
 
-  {% heroImage "kontakt_hero_01.jpg", "Zahnarztpraxis und Team – Dr. Julia Wilhelmy-Wunderlich" %}
+  {% heroImage heroImageName, heroImageAlt %}
 
 </section><!-- .hero -->
 
@@ -27,9 +29,7 @@ metaImage: 1200/kontakt_hero_01.jpg
 
     <div class="item_1 sxty">
 
-      <span class="topline" data="fade-up">{{ title }}</span>
-
-      <!--<p class="copy_intro" data="fade-up delay">{{ title }}</p>-->
+      <h1 class="copy_intro page_title" data-animate="fade-up" data-delay="0.2">{{ title }}</h1>
 
       <h6>Zahnarztpraxis Wilhelmy-Wunderlich und Team</h6>
       Lochnerstraße 43<br>

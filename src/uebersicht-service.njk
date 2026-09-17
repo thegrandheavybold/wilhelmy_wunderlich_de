@@ -11,11 +11,13 @@ layout: "layouts/base.njk"
 seoTitle: Übersicht Service
 seoDescription: "Unsere Services für Patienten: Von Terminbuchung bis Notfalltipps – alles auf einen Blick."
 metaImage: 1200/praxis_hero_01.jpg
+heroImageName: praxis_hero_01.jpg
+heroImageAlt: Zahnarztpraxis und Team – Dr. Julia Wilhelmy-Wunderlich
 ---
 
 <section class="hero lax">
 
-  {% heroImage "praxis_hero_01.jpg", "Zahnarztpraxis und Team – Dr. Julia Wilhelmy-Wunderlich"%}
+  {% heroImage heroImageName, heroImageAlt %}
 
 </section><!-- .hero -->
 
@@ -24,86 +26,86 @@ metaImage: 1200/praxis_hero_01.jpg
   <div class="wrapper">
 
     <div class="item_1">
-      <span class="topline" data="fade-up">Wir. Für Sie.</span>
-      <p class="copy_intro" data="fade-up delay">Unsere Services für Sie.</p>
+      <span class="topline" data-animate="fade-up">Wir. Für Sie.</span>
+      <h1 class="copy_intro" data-animate="fade-up" data-delay="0.2">Unsere Services für Sie.</h1>
     </div><!-- .item_1 -->
 
     <div class="item_2">
-      <div data="fade-up">
+      <div data-animate="fade-up">
         {% picture "service_teaser_01.jpg", "Zahnarztpraxis und Team – Dr. Julia Wilhelmy-Wunderlich"%}
       </div>
       <div>
-        <h3 data="fade-up">Anamnese</h3>
-        <p class="copy" data="fade-up delay">Wir bieten Ihnen die Möglichkeit unseren Anamnesebogen bereits vorab ganz bequem Zuhause auszufüllen.</p>
-        <button class="btn btn_red" onclick="location.href='/anamnesebogen'" type="button" data="fade-up">Mehr erfahren</button>
+        <h3 data-animate="fade-up">Anamnese</h3>
+        <p class="copy" data-animate="fade-up" data-delay="0.2">Wir bieten Ihnen die Möglichkeit unseren Anamnesebogen bereits vorab ganz bequem Zuhause auszufüllen.</p>
+        <a class="btn btn_red" href="/anamnesebogen" data-animate="fade-up">Mehr erfahren</a>
       </div>
 
     </div><!-- .item_2 -->
 
     <div class="item_3">
-      <div data="fade-up">
+      <div data-animate="fade-up">
         {% picture "service_teaser_02.jpg", "Zahnarztpraxis und Team – Dr. Julia Wilhelmy-Wunderlich"%}
       </div>
       <div>
-        <h3 data="fade-up">Flexible Öffnungszeiten</h3>
-        <p class="copy" data="fade-up delay">Wir bieten Ihnen die Möglichkeit, einen Termin zu finden, der ganz ohne Stress und Zeitdruck zu Ihrem persönlichen Terminkalender passt.
+        <h3 data-animate="fade-up">Flexible Öffnungszeiten</h3>
+        <p class="copy" data-animate="fade-up" data-delay="0.2">Wir bieten Ihnen die Möglichkeit, einen Termin zu finden, der ganz ohne Stress und Zeitdruck zu Ihrem persönlichen Terminkalender passt.
           <br><br>Durch effiziente Terminorganisation kommt es in unserer Praxis zu kaum Wartezeiten. Ihre Zeit ist uns wertvoll.</p>
-        <button class="btn btn_red" onclick="location.href='/flexible-oeffnungszeiten'" type="button" data="fade-up">Zu unseren Öffnungszeiten</button>
+        <a class="btn btn_red" href="/flexible-oeffnungszeiten" data-animate="fade-up">Zu unseren Öffnungszeiten</a>
       </div>
     </div><!-- .item_3 -->
 
     <div class="item_4">
-      <div data="fade-up">
+      <div data-animate="fade-up">
         {% picture "service_teaser_03.jpg", "Zahnarztpraxis und Team – Dr. Julia Wilhelmy-Wunderlich"%}
       </div>
       <div>
-        <h3 data="fade-up">Terminvereinbarung</h3>
-        <p class="copy" data="fade-up delay">Wir sind telefonisch zu unseren Öffnungszeiten für sie erreichbar 02102 - 847 37 37. Gerne können sie auch ganz bequem online Termine bei uns vereinbaren.</p>
-        <button class="btn btn_red" onclick="location.href='/termin'" type="button" data="fade-up">Mehr erfahren</button>
+        <h3 data-animate="fade-up">Terminvereinbarung</h3>
+        <p class="copy" data-animate="fade-up" data-delay="0.2">Wir sind telefonisch zu unseren Öffnungszeiten für Sie erreichbar: 02102 - 847 37 37. Gerne können Sie auch ganz bequem online Termine bei uns vereinbaren.</p>
+        <a class="btn btn_red" href="/termin" data-animate="fade-up">Mehr erfahren</a>
       </div>
     </div><!-- .item_4 -->
 
     <div class="item_5">
-      <div data="fade-up">
+      <div data-animate="fade-up">
         {% picture "service_teaser_04.jpg", "Zahnarztpraxis und Team – Dr. Julia Wilhelmy-Wunderlich"%}
       </div>
       <div>
-        <h3 data="fade-up">Notfalltipps</h3>
-        <p class="copy" data="fade-up delay">Es kann immer mal etwas passieren. Mit unseren Notfalltipps helfen wir Ihnen bis zu Ihrem Praxisbesuch.</p>
-        <button class="btn btn_red" onclick="location.href='/notfalltipps'" type="button" data="fade-up">Mehr erfahren</button>
+        <h3 data-animate="fade-up">Notfalltipps</h3>
+        <p class="copy" data-animate="fade-up" data-delay="0.2">Es kann immer mal etwas passieren. Mit unseren Notfalltipps helfen wir Ihnen bis zu Ihrem Praxisbesuch.</p>
+        <a class="btn btn_red" href="/notfalltipps" data-animate="fade-up">Mehr erfahren</a>
       </div>
     </div><!-- .item_5 -->
 
     <div class="item_6">
-      <div data="fade-up">
+      <div data-animate="fade-up">
         {% picture "service_teaser_05.jpg", "Zahnarztpraxis und Team – Dr. Julia Wilhelmy-Wunderlich"%}
       </div>
       <div>
-        <h3 data="fade-up">Praxisparkplätze</h3>
-        <p class="copy" data="fade-up delay">Parken an der Praxis. Erfahren Sie, wo Sie praxisnah parken können.</p>
-        <button class="btn btn_red" onclick="location.href='/praxisparkplaetze'" type="button" data="fade-up">Mehr erfahren</button>
+        <h3 data-animate="fade-up">Praxisparkplätze</h3>
+        <p class="copy" data-animate="fade-up" data-delay="0.2">Parken an der Praxis. Erfahren Sie, wo Sie praxisnah parken können.</p>
+        <a class="btn btn_red" href="/praxisparkplaetze" data-animate="fade-up">Mehr erfahren</a>
       </div>
     </div><!-- .item_6 -->
 
     <div class="item_7">
-      <div data="fade-up">
+      <div data-animate="fade-up">
         {% picture "service_teaser_06.jpg", "Zahnarztpraxis und Team – Dr. Julia Wilhelmy-Wunderlich"%}
       </div>
       <div>
-        <h3 data="fade-up">FAQ</h3>
-        <p class="copy" data="fade-up delay">Sie haben Fragen? Hier beantworten wir sie.</p>
-        <button class="btn btn_red" onclick="location.href='/faq'" type="button" data="fade-up">Mehr erfahren</button>
+        <h3 data-animate="fade-up">FAQ</h3>
+        <p class="copy" data-animate="fade-up" data-delay="0.2">Sie haben Fragen? Hier beantworten wir sie.</p>
+        <a class="btn btn_red" href="/faq" data-animate="fade-up">Mehr erfahren</a>
       </div>
     </div><!-- .item_7 -->
 
     <div class="item_8">
-      <div data="fade-up">
+      <div data-animate="fade-up">
         {% picture "service_teaser_07.jpg", "Zahnarztpraxis und Team – Dr. Julia Wilhelmy-Wunderlich"%}
       </div>
       <div>
-        <h3 data="fade-up">Links</h3>
-        <p class="copy" data="fade-up delay">Hilfreiche Infos rund um das Thema Zahnmedizin.</p>
-        <button class="btn btn_red" onclick="location.href='/links'" type="button" data="fade-up">Mehr erfahren</button>
+        <h3 data-animate="fade-up">Links</h3>
+        <p class="copy" data-animate="fade-up" data-delay="0.2">Hilfreiche Infos rund um das Thema Zahnmedizin.</p>
+        <a class="btn btn_red" href="/links" data-animate="fade-up">Mehr erfahren</a>
       </div>
     </div><!-- .item_8 -->
 

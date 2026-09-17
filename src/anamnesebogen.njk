@@ -10,26 +10,13 @@ layout: "layouts/base.njk"
 seoTitle: Anamnesebogen
 seoDescription: "Für eine gut vorbereitete zahnärztliche Behandlung: Unser Anamnesebogen zum Download."
 metaImage: 1200/anamnesebogen_hero_01.jpg
+heroImageName: anamnesebogen_hero_01.jpg
+heroImageAlt: Zahnarztpraxis und Team – Dr. Julia Wilhelmy-Wunderlich
 ---
-
-<!--<section class="fond">
-
-  <div class="wrapper">
-
-    <div class="item_1">
-
-      <span class="topline" data="fade-up">{{ title }}</span>
-      <p class="copy_intro" data="fade-up delay">Neupatienten</p>
-
-    </div>
-
-  </div>
-
-</section> -->
 
 <section class="hero lax">
 
-  {% heroImage "anamnesebogen_hero_01.jpg", "Zahnarztpraxis und Team – Dr. Julia Wilhelmy-Wunderlich" %}
+  {% heroImage heroImageName, heroImageAlt %}
 
 </section><!-- .hero -->
 
@@ -41,11 +28,11 @@ metaImage: 1200/anamnesebogen_hero_01.jpg
 
     <div class="item_1 sxty">
       
-      <span class="topline" data="fade-up">Service</span>
+      <span class="topline" data-animate="fade-up">Service</span>
 
-      <p class="copy_intro" data="fade-up delay">{{ title }}</p>
+      <h1 class="copy_intro page_title" data-animate="fade-up" data-delay="0.2">{{ title }}</h1>
 
-      Wir freuen uns darauf Sie persönliche kennenzulernen und beraten zu können. Um unsere Behandlung und Beratung bestmöglich auf Sie abstimmen zu können, benötigen wir einige Angaben zu Ihrem Gesundheitszustand, eingenommenen Medikamenten und ihren Wünschen.
+      Wir freuen uns darauf, Sie persönlich kennenzulernen und beraten zu können. Um unsere Behandlung und Beratung bestmöglich auf Sie abstimmen zu können, benötigen wir einige Angaben zu Ihrem Gesundheitszustand, eingenommenen Medikamenten und Ihren Wünschen.
       <br><br>
       Diesen Anamnesebogen können Sie bequem zu Hause ausdrucken, ausfüllen und zum nächsten Termin mit in unsere Praxis bringen. Alternativ kommen Sie gerne 10 Minuten vor Ihrem geplanten Termin, um den Bogen bei uns auszufüllen.
       <br><br>
@@ -53,7 +40,7 @@ metaImage: 1200/anamnesebogen_hero_01.jpg
       <a class="beta_link link" href="/assets/pdf/anamnesebogen_de.pdf" target="_blank" rel="nofollow noopener">Download Anamnesebogen / DE</a><br>
       <a class="beta_link link" href="/assets/pdf/anamnesebogen_en.pdf" target="_blank" rel="nofollow noopener">Download Anamnesebogen / EN</a>
       <br><br>
-      Senden Sie uns aktuelle Röntgenbilder gerne vorab per Mail an <a class="link" href="mailto:praxis@zahnaerzte-in-ratingen.de">info@zahnaerzte-in-ratingen.de</a> oder bringen diese zum Termin mit.
+      Senden Sie uns aktuelle Röntgenbilder gerne vorab per Mail an <a class="link" href="mailto:praxis@zahnaerzte-in-ratingen.de">praxis@zahnaerzte-in-ratingen.de</a> oder bringen diese zum Termin mit.
       <br><br>
       Alle Behandlungsdaten unterliegen der ärztlichen Schweigepflicht und werden selbstverständlich nicht an Dritte weitergegeben. 
       Denken Sie bitte an Ihre Versicherungskarte.

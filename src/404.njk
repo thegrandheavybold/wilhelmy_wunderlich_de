@@ -6,6 +6,7 @@ layout: "layouts/base.njk"
 seoTitle: Seite nicht gefunden (404)
 seoDescription: Die gesuchte Seite der Zahnarztpraxis Wilhelmy-Wunderlich in Ratingen wurde nicht gefunden. Bitte nutzen Sie die Navigation oder kehren Sie zur Startseite zurück.
 metaImage: 1200/home_hero_01.jpg
+robots: noindex,follow
 ---
 
 <section class="fond impressum">
@@ -14,8 +15,8 @@ metaImage: 1200/home_hero_01.jpg
 
     <div class="item_1">
 
-      <span class="topline" data="fade-up"></span>
-      <p class="copy_intro" data="fade-up delay">{{ title }}</p>
+      <span class="topline" data-animate="fade-up"></span>
+      <h1 class="copy_intro page_title" data-animate="fade-up" data-delay="0.2">{{ title }}</h1>
 
     </div><!-- .item_1 -->
 
@@ -35,7 +36,7 @@ metaImage: 1200/home_hero_01.jpg
       
       Gerne können Sie uns auch <a class="beta_link link" href="mailto:praxis@zahnaerzte-in-ratingen.de">direkt kontaktieren</a> – wir helfen Ihnen weiter.<br>
     </p>
-    <button class="btn btn_red" onclick="location.href='/index'" type="button" data="fade-up">Startseite</button>
+    <a class="btn btn_red" href="/">Startseite</a>
   </div><!-- .wrapper -->
 
 </section>

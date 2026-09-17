@@ -19,8 +19,9 @@ metaImage: 1200/slider_03.jpg
 
     <div class="item_1">
 
-      <span class="topline" data="fade-up">Das Team</span>
-      <p class="copy_intro" data="fade-up delay">Dr. Julia Wilhelmy-Wunderlich und Dr. Verena Gaster möchten sich Ihnen gerne einmal vorstellen</p>
+      <span class="topline" data-animate="fade-up">Das Team</span>
+      <h1 class="copy_intro page_title" data-animate="fade-up" data-delay="0.2">{{ title }}</h1>
+      <p class="copy" data-animate="fade-up">Dr. Julia Wilhelmy-Wunderlich und Dr. Verena Gaster möchten sich Ihnen gerne einmal vorstellen.</p>
 
     </div><!-- .item_1 -->
 
@@ -35,26 +36,24 @@ metaImage: 1200/slider_03.jpg
 
     <div class="item_1">
 
-      <div class="rnd" data="fade-up">
+      <div class="rnd" data-animate="fade-up">
         {% picture "julia-wilhelmy-wunderlich.jpg", "Zahnarztpraxis und Team – Dr. Julia Wilhelmy-Wunderlich"%}
       </div>
       <div>
-        <h6 data="fade-up">Dr. Julia Wilhelmy-Wunderlich</h6>
-        <!-- <p class="copy" data="fade-up delay">Nulla consequat massa quis enim.  Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu.</p> -->
-        <button class="btn btn_red" onclick="location.href='/Dr_Julia_Wilhelmy-Wunderlich'" type="button" data="fade-up">Mehr erfahren</button>
+        <h6 data-animate="fade-up">Dr. Julia Wilhelmy-Wunderlich</h6>
+        <a class="btn btn_red" href="/Dr_Julia_Wilhelmy-Wunderlich" data-animate="fade-up">Mehr erfahren</a>
       </div>
 
     </div><!-- .item_1 -->
 
     <div class="item_2">
 
-      <div class="rnd" data="fade-up">
+      <div class="rnd" data-animate="fade-up">
         {% picture "verena_gaster.jpg", "Zahnarztpraxis und Team – Dr. Verena Gaster"%}
       </div>
       <div>
-        <h6 data="fade-up">Dr. Verena Gaster</h6>
-        <!-- <p class="copy" data="fade-up delay">Nulla consequat massa quis enim.  Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu.</p> -->
-        <button class="btn btn_red" onclick="location.href='/Dr_Verena_Gaster'" type="button" data="fade-up">Mehr erfahren</button>
+        <h6 data-animate="fade-up">Dr. Verena Gaster</h6>
+        <a class="btn btn_red" href="/Dr_Verena_Gaster" data-animate="fade-up">Mehr erfahren</a>
       </div>
 
     </div><!-- .item_2 -->
@@ -67,15 +66,15 @@ metaImage: 1200/slider_03.jpg
 
   <div class="wrapper">
 
-    <div class="item_1" data="fade-up">
+    <div class="item_1" data-animate="fade-up">
       <svg class="ww_flame" alt="Quotation Marks">
         <use xlink:href="#ww_flame"></use>
       </svg>
     </div><!-- .item_1 -->
 
     <div class="item_2">
-      <h3 data="fade-up">Was uns antreibt</h3>
-      <p class="copy" data="fade-up delay">Unsere Leidenschaft, unseren Patienten zu helfen ihre Mundgesundheit zu verbessern und ein strahlendes Lächeln zu erhalten. Unser gemeinsames Ziel ist es, durch eine einfühlsame Behandlung und eine hochwertige ästhetische Versorgung ihre Lebensqualität zu steigern.</p>
+      <h3 data-animate="fade-up">Was uns antreibt</h3>
+      <p class="copy" data-animate="fade-up" data-delay="0.2">Unsere Leidenschaft, unseren Patienten zu helfen ihre Mundgesundheit zu verbessern und ein strahlendes Lächeln zu erhalten. Unser gemeinsames Ziel ist es, durch eine einfühlsame Behandlung und eine hochwertige ästhetische Versorgung ihre Lebensqualität zu steigern.</p>
     </div><!-- .item_2 -->
 
   </div><!-- .wrapper -->
@@ -87,7 +86,7 @@ metaImage: 1200/slider_03.jpg
 <section class="hero">
 
   <div class="wrapper">
-    <h3 data="fade-up">Wir. Für Sie.</h3>
+    <h3 data-animate="fade-up">Wir. Für Sie.</h3>
   </div><!-- .wrapper -->
 
   {% picture "offene-stellen_02.jpg", "Zahnarztpraxis und Team – Dr. Julia Wilhelmy-Wunderlich"%}

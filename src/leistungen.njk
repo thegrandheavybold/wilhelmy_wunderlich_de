@@ -10,11 +10,13 @@ layout: "layouts/base.njk"
 seoTitle: Leistungen
 seoDescription: Unsere Praxis bietet Ihnen ein umfangreiches Behandlungsspektrum. Gerne nehmen wir uns Zeit, um in einem persönlichen Gespräch auf Ihre individuellen Fragen einzugehen.
 metaImage: 1200/leistungen_hero_01.jpg
+heroImageName: leistungen_hero_01.jpg
+heroImageAlt: Zahnarztpraxis und Team – Dr. Julia Wilhelmy-Wunderlich
 ---
 
 <section class="hero lax">
 
-  {% heroImage "leistungen_hero_01.jpg", "Zahnarztpraxis und Team – Dr. Julia Wilhelmy-Wunderlich" %}
+  {% heroImage heroImageName, heroImageAlt %}
 
 </section><!-- .hero -->
 
@@ -23,17 +25,14 @@ metaImage: 1200/leistungen_hero_01.jpg
   <div class="wrapper">
 
     <div class="intro_content svnty">
-      <span class="topline" data="fade-up">{{ title }}</span>
-
-      <!-- <p class="copy_intro" data="fade-up delay">Lorem Ipsum dolor sit</p> -->
-
+      <h1 class="copy_intro page_title" data-animate="fade-up" data-delay="0.2">{{ title }}</h1>
       <p class="ctr">Unsere Praxis bietet Ihnen ein umfangreiches Behandlungsspektrum. Gerne nehmen wir uns Zeit, um in einem persönlichen Gespräch auf Ihre individuellen Fragen einzugehen.</p>
 
     </div><!-- .intro_content -->
 
     <div class="accordion-container svnty">
 
-      <div class="ac" data="fade-up">
+      <div class="ac" data-animate="fade-up">
         <h6 class="ac-header">
           <button type="button" class="ac-trigger">Inlays und Füllungstherapie</button>
         </h6>
@@ -46,17 +45,17 @@ metaImage: 1200/leistungen_hero_01.jpg
         </div>
       </div>
 
-      <div class="ac" data="fade-up">
+      <div class="ac" data-animate="fade-up">
         <h6 class="ac-header">
           <button type="button" class="ac-trigger">Wurzelbehandlungen</button>
         </h6>
         <div class="ac-panel">
           <span class="ac-text">
             Wenn durch eine tiefe Karies oder einen Unfall Bakterien in den Zahnnerv eingedrungen sind, entzündet sich dieser und stirbt ab. Dann müssen die Nervkanäle in den Zahnwurzeln gesäubert, desinfiziert und dicht aufgefüllt werden.<br><br>
-            Bei einer Wurzelbehandlung werden die Wurzelkanäle gesäubert, aufbereitet und entzündliches Gewebe, der Zahnnerv und Bakterien entfernt. Für eine langfrisitig erfolgreiche Wurzelbehandlung und den dauerhaften Zahnerhalt müssen die Bakterien in allen kleinen Verästelungen und Aufzweigungen der Wurzelkanäle bis hin zur Wurzelspitze erreicht und entfernt werden. Früher mussten solche Zähne häufig gezogen werden.<br>
-            Heutzutage kann man unter optischer Vergrößerung mit rotierenden Feilen, elektrometrischer Längenmessung und schallaktiverten Spüllungen das infizierte Gewebe schonend und vor allem gründlich entfernen. Danach wird ein biokompatibles Medikament in den Zahn eingebracht um eine Reinfektion des Wurzelkanalsystems zu verhindern und weitere Bakterien abzutöten.<br><br>
+            Bei einer Wurzelbehandlung werden die Wurzelkanäle gesäubert, aufbereitet und entzündliches Gewebe, der Zahnnerv und Bakterien entfernt. Für eine langfristig erfolgreiche Wurzelbehandlung und den dauerhaften Zahnerhalt müssen die Bakterien in allen kleinen Verästelungen und Aufzweigungen der Wurzelkanäle bis hin zur Wurzelspitze erreicht und entfernt werden. Früher mussten solche Zähne häufig gezogen werden.<br>
+            Heutzutage kann man unter optischer Vergrößerung mit rotierenden Feilen, elektrometrischer Längenmessung und schallaktivierten Spülungen das infizierte Gewebe schonend und vor allem gründlich entfernen. Danach wird ein biokompatibles Medikament in den Zahn eingebracht, um eine Reinfektion des Wurzelkanalsystems zu verhindern und weitere Bakterien abzutöten.<br><br>
             Im Anschluss daran wird das gereinigte Wurzelkanalsystem wieder dicht gefüllt und verschlossen. Häufig müssen die wurzelbehandelten Zähne aufgrund ihres ausgeprägten Substanzverlustes mit einer Krone versorgt werden.<br>
-            Ein solcher Zahn wird ihnen noch viele Jahre erhalten bleiben. Durch die modernen Methoden der Wurzelkanalbehandlung können die Zähne mit einer Wahrscheinlichkeit von über 90 % gerettet werden.<br>
+            Ein solcher Zahn wird Ihnen noch viele Jahre erhalten bleiben. Durch die modernen Methoden der Wurzelkanalbehandlung können die Zähne mit einer Wahrscheinlichkeit von über 90 % gerettet werden.<br>
             Gerne beraten wir Sie hierzu in unserer Praxis in Ratingen.
 
           </span>
@@ -64,26 +63,26 @@ metaImage: 1200/leistungen_hero_01.jpg
       </div>
       
 
-      <div class="ac" data="fade-up">
+      <div class="ac" data-animate="fade-up">
         <h6 class="ac-header">
           <button type="button" class="ac-trigger">Bleachen (Zahnaufhellung)</button>
         </h6>
         <div class="ac-panel">
           <span class="ac-text">
             Sind Verfärbungen hartnäckig oder als Folge von Zahnwurzelbehandlungen bei einzelnen Zähnen aufgetreten, hilft oftmals das fachmännische Bleachen (englisch = Bleichen).<br>
-            Mit einem Bleaching können wir ihre Zahnfarbe dauerhaft aufhellen. Dabei wird zwischen verschiedenen Bleachingverfahren unterschieden.<br><br>
+            Mit einem Bleaching können wir Ihre Zahnfarbe dauerhaft aufhellen. Dabei wird zwischen verschiedenen Bleachingverfahren unterschieden.<br><br>
             <h6>Home-Bleaching:</h6>
-            Hierfür werden ihnen individuelle Schienen angefertigt, die sie zusammen mit dem Bleaching Gel mit nach Hause nehmen. Dort können sie dann selbstständig und schrittweise unter genauer Anleitung selber das Bleaching vornehmen.<br><br>
+            Hierfür werden Ihnen individuelle Schienen angefertigt, die Sie zusammen mit dem Bleaching-Gel mit nach Hause nehmen. Dort können Sie das Bleaching unter genauer Anleitung selbstständig und schrittweise vornehmen.<br><br>
             <h6>In-office Bleaching:</h6>
-            Beim In-office Bleaching reservieren wir für sie exklusiv Zeit in der Praxis und führen das Bleaching direkt am Stuhl durch unsere fachkundigen Mitarbeiterinnnen durch.<br><br>
+            Beim In-office-Bleaching reservieren wir für Sie exklusiv Zeit in der Praxis und führen das Bleaching direkt am Stuhl durch unsere fachkundigen Mitarbeiterinnen durch.<br><br>
             <h6>Internes Bleaching:</h6>
-            Diese Methode wird angewandt wenn ihre Zähne durch eine Wurzelbehandlung dunkel verfärbt sind. Dabei werden die Zähne vom Inneren des Zahnes heraus gebleicht.  
+            Diese Methode wird angewandt, wenn Ihre Zähne durch eine Wurzelbehandlung dunkel verfärbt sind. Dabei werden die Zähne vom Inneren des Zahnes heraus gebleicht.
           </span>
         </div>
       </div>
 
 
-      <div class="ac" data="fade-up">
+      <div class="ac" data-animate="fade-up">
         <h6 class="ac-header">
           <button type="button" class="ac-trigger">Veneers (Keramikschalen)</button>
         </h6>
@@ -94,44 +93,57 @@ metaImage: 1200/leistungen_hero_01.jpg
         </div>
       </div>
 
-      <div class="ac" data="fade-up">
+      <div class="ac" data-animate="fade-up">
+        <h6 class="ac-header">
+          <button type="button" class="ac-trigger">Intraoralscanner – abdruckfrei zu Schienen, Kronen, Veneers und Zahnersatz</button>
+        </h6>
+        <div class="ac-panel">
+          <span class="ac-text">
+            Mit unserem Intraoralscanner können wir in vielen Fällen auf den klassischen Abdruck mit Abdruckmasse verzichten. Stattdessen erfassen wir Ihre Zähne und die Bisssituation digital, präzise und komfortabel.<br><br>
+            Das ist für viele Patienten deutlich angenehmer, insbesondere bei empfindlichem Würgereiz. Gleichzeitig ermöglicht die digitale Abformung eine sehr exakte Planung und eine hochwertige Herstellung von Schienen, Kronen, Veneers und weiterem Zahnersatz.<br><br>
+            Die gewonnenen Daten können direkt weiterverarbeitet werden, wodurch Behandlungsabläufe oft effizienter und komfortabler werden. Gerne beraten wir Sie, ob eine abdruckfreie Versorgung in Ihrem individuellen Fall möglich ist.
+          </span>
+        </div>
+      </div>
+
+      <div class="ac" data-animate="fade-up">
         <h6 class="ac-header">
           <button type="button" class="ac-trigger">Kronen, Inlay, Füllungen, Brücken (zerstörte Zahnsubstanz durch zahnfarbenen Ersatz wieder herstellen)</button>
         </h6>
         <div class="ac-panel">
           <span class="ac-text">
-            Zur Wiederherstellung ihrer Zahnsubstanz bieten wir ihnen Keramikinlays an, sowie geschichtete Kunststofffüllungen, die zu einem sehr hohen Prozentsatz mit Keramikpartikeln in Nanogröße gefüllt sind. Vorteile dieser Füllungsart sind: sie ist zahnfarben und nahezu unsichtbar, es kann sehr zahnschonend gearbeitet werden, da keine zusätzliche gesunde Zahnhartsubstanz zum Halt der Füllung entfernt werden muss. Kauflächen können natürlich gestaltet werden und bieten eine gute Kaustabilität.<br>
+            Zur Wiederherstellung Ihrer Zahnsubstanz bieten wir Ihnen Keramikinlays sowie geschichtete Kunststofffüllungen an, die zu einem sehr hohen Prozentsatz mit Keramikpartikeln in Nanogröße gefüllt sind. Vorteile dieser Füllungsart sind: Sie ist zahnfarben und nahezu unsichtbar. Außerdem kann sehr zahnschonend gearbeitet werden, da keine zusätzliche gesunde Zahnhartsubstanz zum Halt der Füllung entfernt werden muss. Kauflächen können natürlich gestaltet werden und bieten eine gute Kaustabilität.<br>
             Ebenso Kronen, Brücken und Teilkronen sind bei uns selbstverständlich metallfrei und damit hochästhetisch und zahnfarben.
           </span>
         </div>
       </div>
 
-      <div class="ac" data="fade-up">
+      <div class="ac" data-animate="fade-up">
         <h6 class="ac-header">
           <button type="button" class="ac-trigger">Zahnimplantate oder implantatgetragener Zahnersatz</button>
         </h6>
         <div class="ac-panel">
           <span class="ac-text">
-            Wir können Ihre fehlenden Zähne durch einzelne Zahnimplantate oder implantatgetragenen Zahnersatz ersetzen. Zahnimplantate sind die beste Alternative zu herausnehmbarem Zahnersatz und gleichen in Ihrer Funktion ihrem eigenen Zahn. Hierfür arbeiten wir Hand in Hand mit erfahrenen Chirurgen und Dentallaboren. Nach Absprache können diese auch direkt zu uns in die Praxis kommen.
+            Wir können Ihre fehlenden Zähne durch einzelne Zahnimplantate oder implantatgetragenen Zahnersatz ersetzen. Zahnimplantate sind die beste Alternative zu herausnehmbarem Zahnersatz und gleichen in ihrer Funktion Ihrem eigenen Zahn. Hierfür arbeiten wir Hand in Hand mit erfahrenen Chirurgen und Dentallaboren. Nach Absprache können diese auch direkt zu uns in die Praxis kommen.
           </span>
         </div>
       </div>
 
-      <div id="zahnreinigung" class="ac" data="fade-up">
+      <div id="zahnreinigung" class="ac" data-animate="fade-up">
         <h6 class="ac-header">
           <button type="button" class="ac-trigger">Professionelle Zahnreinigung (PZR)</button>
         </h6>
         <div class="ac-panel">
           <span class="ac-text">
-            Die häusliche Mundhygiene bildet zusammen mit der zahnärztlichen Prophylaxe die Basis für ihre Mundgesundheit und ein lebenslanges Wohlbefinden.<br><br>
+            Die häusliche Mundhygiene bildet zusammen mit der zahnärztlichen Prophylaxe die Basis für Ihre Mundgesundheit und ein lebenslanges Wohlbefinden.<br><br>
             Zur zahnärztlichen Prophylaxe zählen neben den klassischen halbjährlichen Kontrollen auch die professionelle Zahnreinigung (PZR).<br><br>
-            Hierbei werden äußerst gründliche alle harten und weichen Beläge entfernt und die Zähne poliert– insbesondere an den schwer zugänglichen Nischen wie den Zahnzwischenräumen, den Zahnfleischtaschen und dem Zahnfleischrand. Für eine besonders gründliche und schonende Reingung nutzen wir unser Airflow mit dem hochwertigen Glycin Pulver. Dabei wird das Wasser und das Pulver-Strahlgerät extra für Sie auf Körpertemperatur erwärmt. Damit können auch Patienten mit empfindlichen Zähnen sich entspannt zurücklegen- quasi mit dem Wellnessprogramm für ihre Zähne.<br><br>
-            Ausführliche Informationen für ihre individuelle häusliche Mundhygiene liefern wir Ihnen direkt mit.
+            Hierbei werden äußerst gründlich alle harten und weichen Beläge entfernt und die Zähne poliert – insbesondere an den schwer zugänglichen Nischen wie den Zahnzwischenräumen, den Zahnfleischtaschen und dem Zahnfleischrand. Für eine besonders gründliche und schonende Reinigung nutzen wir unser Airflow-Gerät mit hochwertigem Glycinpulver. Dabei werden das Wasser und das Pulverstrahlgerät extra für Sie auf Körpertemperatur erwärmt. Damit können sich auch Patienten mit empfindlichen Zähnen entspannt zurücklehnen – quasi mit einem Wellnessprogramm für ihre Zähne.<br><br>
+            Ausführliche Informationen für Ihre individuelle häusliche Mundhygiene liefern wir Ihnen direkt mit.
           </span>
         </div>
       </div>
 
-      <div id="zahnreinigung" class="ac" data="fade-up">
+      <div id="zahnreinigung" class="ac" data-animate="fade-up">
         <h6 class="ac-header">
           <button type="button" class="ac-trigger">Kinderprophylaxe</button>
         </h6>
@@ -145,7 +157,7 @@ metaImage: 1200/leistungen_hero_01.jpg
         </div>
       </div>
 
-      <div class="ac" data="fade-up">
+      <div class="ac" data-animate="fade-up">
         <h6 class="ac-header">
           <button type="button" class="ac-trigger">Parodontologie/ Parodontitisbehandlung</button>
         </h6>
@@ -164,7 +176,7 @@ metaImage: 1200/leistungen_hero_01.jpg
         </div>
       </div>
 
-      <div class="ac" data="fade-up">
+      <div class="ac" data-animate="fade-up">
         <h6 class="ac-header">
           <button type="button" class="ac-trigger">Lachgas</button>
         </h6>
@@ -172,7 +184,7 @@ metaImage: 1200/leistungen_hero_01.jpg
           <span class="ac-text">
             <h6>Entspannt beim Zahnarzt durch Lachgas</h6>
             <span class="lachgas"><span>Um Ihnen Ihren Gang zu uns noch mehr zu erleichtern, bieten wir Ihnen die Behandlung unter Lachgas an.<br>
-            In den USA und einigen anderen Ländern gehört die Lachgasbehandlung seit vielen Jahren zum Alltag des Zahnarztes. Dadurch konnten viele Menschen Ihre Angst überwinden und ihr Lächeln wieder finden.</span>
+            In den USA und einigen anderen Ländern gehört die Lachgasbehandlung seit vielen Jahren zum Alltag des Zahnarztes. Dadurch konnten viele Menschen ihre Angst überwinden und ihr Lächeln wiederfinden.</span>
               {% picture "lachgas-768x512.jpg", "Zahnarztpraxis und Team – Dr. Julia Wilhelmy-Wunderlich"%}</span>
               <caption>Foto: Biewer medical Medizinprodukte, Koblenz</caption>
             <br><br>
@@ -192,16 +204,16 @@ metaImage: 1200/leistungen_hero_01.jpg
             Lachgas wird frei im Blut transportiert, ohne sich mit den roten Blutkörperchen zu verbinden. Es wird nicht verstoffwechselt und zu beinahe 100 % über die Ausatmung wieder ausgeschieden. In der Zwischenzeit wirkt es im Zentralen Nervensystem. Es ruft einen Zustand kompletter körperlicher und seelischer Entspannung hervor, reduziert den Würgereiz und wirkt schmerzlindernd. Das Zeitempfinden lässt ebenso nach. Lachgas findet bereits seit über 100 Jahren Anwendung in der Medizin.
             <br><br>
             <h6>Wie sicher ist die Lachgasbehandlung?</h6>
-            Die Lachgassedierung ist ein sichere lang erprobte Behandlung. Auch bei Kindern kann Sie problemlos durchgeführt werden. Es kam noch nie zu allergischen Reaktionen oder anderen Komplikationen.
+            Die Lachgassedierung ist eine sichere, lang erprobte Behandlung. Auch bei Kindern kann sie problemlos durchgeführt werden. Es kam noch nie zu allergischen Reaktionen oder anderen Komplikationen.
             <br><br>
             Weitere Informationen finden Sie <a href="http://biewer-medical.com/" target="_blank" rel="nofollow noreferrer noopener">hier</a>.
             <br><br>
-            Gerne sprechen Sie uns gerne zu dem Thema Lachgas Behandlung in unserer Zahnarztpraxis in Ratingen an.
+            Sprechen Sie uns gerne auf das Thema Lachgasbehandlung in unserer Zahnarztpraxis in Ratingen an.
           </span>
         </div>
       </div>
 
-      <div class="ac" data="fade-up">
+      <div class="ac" data-animate="fade-up">
         <h6 class="ac-header">
           <button type="button" class="ac-trigger">Schienentherapie/CMD</button>
         </h6>
@@ -220,13 +232,17 @@ metaImage: 1200/leistungen_hero_01.jpg
             </ul>
             <br>
             Viele Menschen knirschen mit den Zähnen, ohne es zu wissen. Dabei wird der Zahnschmelz wie mit Schmirgelpapier abgeschliffen. Zudem leidet das Kiefergelenk, in den Kiefermuskeln kommt es zu Verspannungen, die auch in die weitere Umgebung ausstrahlen können. Zahnsubstanz geht im Laufe der Jahre verloren, die Zähne werden kürzer, es können Kopfschmerzen, Tinnitus und ein Knacken oder sogar Schmerzen im Kiefergelenk folgen. Ursachen sind oft Stress oder ungünstige Zahnkontakte.<br><br>
-            Zur Entlastung der Kiefergelenke und Kaumuskeln, sowie zum Schutz der Zahnoberflächen können wir Ihnen eine spezielle Aufbissschiene auch „Knirscherschiene“ im Volksmund genannt herstellen, die vor allem nachts getragen wird. Dies führt meistens sehr schnell zu einer Linderung ihrer Beschwerden.<br>
-            Hierfür arbeiten wir eng mit Physiotherapeuten zusammen, um Ihnen schnell mit ihrem Anliegen weiterhelfen zu können.
+            Zur Entlastung der Kiefergelenke und Kaumuskeln sowie zum Schutz der Zahnoberflächen können wir Ihnen eine spezielle Aufbissschiene, im Volksmund auch „Knirscherschiene“ genannt, herstellen, die vor allem nachts getragen wird. Dies führt meistens sehr schnell zu einer Linderung Ihrer Beschwerden.<br>
+            Hierfür arbeiten wir eng mit Physiotherapeuten zusammen, um Ihnen schnell mit Ihrem Anliegen weiterhelfen zu können.<br><br>
+            <h6>Botox bei CMD</h6>
+            Bei einer craniomandibulären Dysfunktion (CMD) kann es durch eine überlastete Kaumuskulatur zu Schmerzen, Verspannungen, Zähneknirschen, Kopfschmerzen oder Beschwerden im Bereich des Kiefergelenks kommen. In vielen Fällen helfen bereits eine individuell angefertigte Schiene, die Optimierung der Bisssituation sowie eine begleitende physiotherapeutische Behandlung.<br><br>
+            In ausgewählten Fällen kann zusätzlich eine Behandlung mit Botulinumtoxin sinnvoll sein. Ziel ist es, überaktive Kaumuskeln vorübergehend zu entspannen und so die Belastung auf Muskeln, Zähne und Kiefergelenke zu reduzieren. Dadurch können Beschwerden gelindert und die Schienentherapie sinnvoll ergänzt werden.<br><br>
+            Ob diese Form der Behandlung für Sie geeignet ist, prüfen wir immer erst nach einer sorgfältigen Untersuchung und einer individuellen Diagnostik. Gerne beraten wir Sie persönlich zu den Möglichkeiten einer ganzheitlichen CMD-Behandlung in unserer Praxis.
           </span>
         </div>
       </div>
 
-      <div class="ac" data="fade-up">
+      <div class="ac" data-animate="fade-up">
         <h6 class="ac-header">
           <button type="button" class="ac-trigger">Schnarchertherapie</button>
         </h6>
@@ -241,7 +257,7 @@ metaImage: 1200/leistungen_hero_01.jpg
         </div>
       </div>
 
-      <div class="ac" data="fade-up">
+      <div class="ac" data-animate="fade-up">
         <h6 class="ac-header">
           <button type="button" class="ac-trigger">Kinderbehandlung</button>
         </h6>

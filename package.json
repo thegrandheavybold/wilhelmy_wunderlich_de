@@ -10,13 +10,24 @@
   "main": ".eleventy.mjs",
   "type": "module",
   "scripts": {
-    "build": "npx @11ty/eleventy",
-    "start": "npx @11ty/eleventy --serve --quiet",
+    "clean": "rm -rf dist",
+    "predev": "npm run clean",
+    "build:assets": "vite build",
+    "build:site": "npx @11ty/eleventy",
+    "build": "npm run clean && npm run build:assets && npm run build:site",
+    "dev:assets": "vite build --watch --mode development",
+    "dev:site": "npx @11ty/eleventy --watch --incremental --quiet",
+    "dev:netlify": "netlify dev --port=8888 --framework=#static --no-open",
+    "dev": "concurrently -k -n vite,11ty,netlify \"npm:dev:assets\" \"npm:dev:site\" \"npm:dev:netlify\"",
+    "start": "npm run dev",
     "debug": "cross-env DEBUG=Eleventy* npx @11ty/eleventy"
   },
   "devDependencies": {
     "@11ty/eleventy": "^3.1.1",
-    "@11ty/eleventy-navigation": "^0.3.4"
+    "@11ty/eleventy-navigation": "^0.3.4",
+    "concurrently": "^9.2.0",
+    "sass": "^1.101.0",
+    "vite": "^5.4.19"
   },
   "dependencies": {
     "accordion-js": "^3.4.1",

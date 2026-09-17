@@ -5,6 +5,8 @@ layout: "layouts/base.njk"
 seoTitle: Herzlich Willkommen in unserer Zahnarztpraxis.
 seoDescription: Ihr Zahnarzt in Ratingen – seit zwei Generationen für Ihre Zahngesundheit da. Modern, vertrauensvoll, kompetent. Nähe Düsseldorf im Zentrum von Ratingen.
 metaImage: 1200/home_hero_01.jpg
+heroImageName: home_hero_01.jpg
+heroImageAlt: Zahnarztpraxis und Team – Dr. Julia Wilhelmy-Wunderlich
 ---
 
 <section class="hero lax welcome">
@@ -13,7 +15,7 @@ metaImage: 1200/home_hero_01.jpg
     <!--<p class="greetings">Willkommen.</p>-->
   </div><!-- .wrapper -->
 
-  {% heroImage "home_hero_01.jpg", "Zahnarztpraxis und Team – Dr. Julia Wilhelmy-Wunderlich" %}
+  {% heroImage heroImageName, heroImageAlt %}
 
 </section><!-- .hero -->
 
@@ -21,11 +23,11 @@ metaImage: 1200/home_hero_01.jpg
 
   <div class="wrapper grd">
 
-    <span class="topline" data="fade-up">Herzlich Willkommen in unserer Zahnarztpraxis.</span>
-    <p class="copy_intro" data="fade-up">Sie suchen einen guten Zahnarzt in Ratingen? Seit über 30 Jahren und bereits in zweiter Generation sind wir für Sie als Zahnärzte im Zentrum von Ratingen/nahe Düsseldorf für Sie tätig.</p>
-    <p class="copy" data="fade-up delay">Wir verstehen uns als Familienpraxis, die sie von klein auf bis ins hohe Alter nach den neusten wissenschaftlichen Erkenntnissen zahnmedizinisch betreut.<br>Moderne Zahnheilkunde, vertrauensvolle Zusammenarbeit, individuelle Behandlungskonzepte – dafür stehen wir als Zahnarztpraxis. 
-    <br>Unser Ziel ist es ihr strahlendes Lächeln bis ins hohe Alter zu erhalten. 
-    <br><br>Ihre individuellen Bedürfnisse und sie als Patient stehen bei uns im Mittelpunkt. Ihre Zahngesundheit ist uns wichtig.</p>
+    <span class="topline" data-animate="fade-up">Herzlich Willkommen in unserer Zahnarztpraxis.</span>
+    <h1 class="copy_intro" data-animate="fade-up">Sie suchen einen guten Zahnarzt in Ratingen? Seit über 30 Jahren und bereits in zweiter Generation sind wir für Sie als Zahnärzte im Zentrum von Ratingen/nahe Düsseldorf für Sie tätig.</h1>
+    <p class="copy" data-animate="fade-up" data-delay="0.2">Wir verstehen uns als Familienpraxis, die Sie von klein auf bis ins hohe Alter nach den neusten wissenschaftlichen Erkenntnissen zahnmedizinisch betreut.<br>Moderne Zahnheilkunde, vertrauensvolle Zusammenarbeit, individuelle Behandlungskonzepte – dafür stehen wir als Zahnarztpraxis.
+    <br>Unser Ziel ist es Ihr strahlendes Lächeln bis ins hohe Alter zu erhalten.
+    <br><br>Ihre individuellen Bedürfnisse und Sie als Patient stehen bei uns im Mittelpunkt. Ihre Zahngesundheit ist uns wichtig.</p>
 
   </div><!-- .wrapper -->
 
@@ -36,18 +38,18 @@ metaImage: 1200/home_hero_01.jpg
 
   <div class="wrapper grd">
 
-    <div class="item_1 rnd" data="fade-up">
+    <div class="item_1 rnd" data-animate="fade-up">
       {% picture "visual_home_01.jpg", "Zahnarztpraxis und Team – Dr. Julia Wilhelmy-Wunderlich" %}
     </div><!-- .item_1 -->
 
-    <div class="item_2 rnd" data="fade-up delay">
+    <div class="item_2 rnd" data-animate="fade-up" data-delay="0.2">
       {% picture "visual_home_02.jpg", "Zahnarztpraxis und Team – Dr. Julia Wilhelmy-Wunderlich" %}
     </div><!-- .item_2 -->
 
-    <div class="item_3" data="fade-up">
+    <div class="item_3" data-animate="fade-up">
       <span class="topline">Praxis</span>
-      <p class="copy_intro">Sie stehen als Patient mit ihren individuellen Bedürfnissen im Mittelpunkt. Ob jung oder alt, Angstpatient oder zahnarzterfahren bei uns sind sie in guten Händen.</p>
-      <button class="btn btn_red" onclick="location.href='/uebersicht-praxis/'" type="button">Mehr erfahren</button>
+      <p class="copy_intro">Sie stehen als Patient mit Ihren individuellen Bedürfnissen im Mittelpunkt. Ob jung oder alt, Angstpatient oder zahnarzterfahren – bei uns sind Sie in guten Händen.</p>
+      <a class="btn btn_red" href="/uebersicht-praxis/">Mehr erfahren</a>
     </div><!-- .item_3 -->
 
   </div><!-- .wrapper -->
@@ -75,50 +77,50 @@ metaImage: 1200/home_hero_01.jpg
   <div class="wrapper">
 
     <div class="item_1">
-      <span class="topline" data="fade-up">Leistungen</span>
-      <p class="copy_intro" data="fade-up delay">Wir stehen für gute und moderne Zahnheilkunde in Ratingen.
-        Dank neuster Technologie und regelmäßiger Fortbildung können wir ihr kompetenter Ansprechpartner sein, der Ihnen zu einem strahlenden Lächeln verhilft.
+      <span class="topline" data-animate="fade-up">Leistungen</span>
+      <p class="copy_intro" data-animate="fade-up" data-delay="0.2">Wir stehen für gute und moderne Zahnheilkunde in Ratingen.
+        Dank neuster Technologie und regelmäßiger Fortbildung können wir Ihr kompetenter Ansprechpartner sein, der Ihnen zu einem strahlenden Lächeln verhilft.
         <br><br>
-        Wir bieten Ihnen ein breites Behandlungsspektrum an. Beginnend bei der Vorsorge durch professionelle Zahnreinigung, über Zahnerhalt- und rekonstruktion durch Füllungen, Inlays oder Kronen, sowie Wurzelbehandlungen und Parodontitisbehandlung bis hin zu komplettem Zahnersatz durch Implantate.
+        Wir bieten Ihnen ein breites Behandlungsspektrum an. Beginnend bei der Vorsorge durch professionelle Zahnreinigung, über Zahnerhalt und Rekonstruktion durch Füllungen, Inlays oder Kronen sowie Wurzelbehandlungen und Parodontitisbehandlungen bis hin zu komplettem Zahnersatz durch Implantate.
 </p>
     </div><!-- .item_1 -->
 
     <div class="item_2">
-      <div data="fade-up">
+      <div data-animate="fade-up">
         {% picture "leistungen-teaser_01.jpg", "Zahnarztpraxis und Team – Dr. Julia Wilhelmy-Wunderlich" %}
       </div>
       <div>
-        <h3 data="fade-up">Ästhetische Zahnmedizin</h3>
-        <p class="copy" data="fade-up delay">Einer unserer großen Schwerpunkte ist die ästhetische Zahnheilkunde.</p>
-        <button class="btn btn_red" onclick="location.href='/leistungen'" type="button" data="fade-up">Mehr erfahren</button>
+        <h3 data-animate="fade-up">Ästhetische Zahnmedizin</h3>
+        <p class="copy" data-animate="fade-up" data-delay="0.2">Einer unserer großen Schwerpunkte ist die ästhetische Zahnheilkunde.</p>
+        <a class="btn btn_red" href="/leistungen" data-animate="fade-up">Mehr erfahren</a>
       </div>
 
     </div><!-- .item_2 -->
 
     <div class="item_3">
-      <div data="fade-up">
+      <div data-animate="fade-up">
         {% picture "leistungen-teaser_02.jpg", "Zahnarztpraxis und Team – Dr. Julia Wilhelmy-Wunderlich" %}
       </div>
       <div>
-        <h3 data="fade-up">Prophylaxe & Zahnreinigung</h3>
-        <p class="copy" data="fade-up delay">Schöne und vor allem gesunde Zähne ein Leben lang durch Vorsorge.</p>
-        <button class="btn btn_red" onclick="location.href='/leistungen'" type="button" data="fade-up">Mehr erfahren</button>
+        <h3 data-animate="fade-up">Prophylaxe & Zahnreinigung</h3>
+        <p class="copy" data-animate="fade-up" data-delay="0.2">Schöne und vor allem gesunde Zähne ein Leben lang durch Vorsorge.</p>
+        <a class="btn btn_red" href="/leistungen" data-animate="fade-up">Mehr erfahren</a>
       </div>
     </div><!-- .item_3 -->
 
     <div class="item_4">
-      <div data="fade-up">
+      <div data-animate="fade-up">
         {% picture "leistungen-teaser_03.jpg", "Zahnarztpraxis und Team – Dr. Julia Wilhelmy-Wunderlich" %}
       </div>
       <div>
-        <h3 data="fade-up">Zahnerhaltung</h3>
-        <p class="copy" data="fade-up delay">Zur Zahnerhaltung gehören alle Maßnahmen, die verloren gegangene Substanz ersetzen und wiederherstellen.</p>
-        <button class="btn btn_red" onclick="location.href='/leistungen'" type="button" data="fade-up">Mehr erfahren</button>
+        <h3 data-animate="fade-up">Zahnerhaltung</h3>
+        <p class="copy" data-animate="fade-up" data-delay="0.2">Zur Zahnerhaltung gehören alle Maßnahmen, die verloren gegangene Substanz ersetzen und wiederherstellen.</p>
+        <a class="btn btn_red" href="/leistungen" data-animate="fade-up">Mehr erfahren</a>
       </div>
     </div><!-- .item_4 -->
 
-    <div class="item_5" data="fade-up">
-      <button class="btn btn_red" onclick="location.href='/leistungen'" type="button">Alle Leistungen</button>
+    <div class="item_5" data-animate="fade-up">
+      <a class="btn btn_red" href="/leistungen">Alle Leistungen</a>
     </div><!-- .item_4 -->
 
   </div><!-- .wrapper -->

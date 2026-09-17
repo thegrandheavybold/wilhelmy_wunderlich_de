@@ -11,12 +11,14 @@ layout: "layouts/base.njk"
 seoTitle: Ausstattung
 seoDescription: Dank moderner technischer Hilfsmittel sind oftmals schnellere, schonendere und nicht zuletzt erfolgversprechendere Behandlungen möglich.
 metaImage: 1200/ausstattung_hero_01.jpg
+heroImageName: ausstattung_hero_01.jpg
+heroImageAlt: Zahnarztpraxis und Team – Dr. Julia Wilhelmy-Wunderlich
 ---
 
 
 <section class="hero lax">
 
-  {% heroImage "ausstattung_hero_01.jpg", "Zahnarztpraxis und Team – Dr. Julia Wilhelmy-Wunderlich"%}
+  {% heroImage heroImageName, heroImageAlt %}
 
 </section><!-- .hero -->
 
@@ -25,9 +27,9 @@ metaImage: 1200/ausstattung_hero_01.jpg
   <div class="wrapper">
 
     <div class="intro_content svnty">
-      <span class="topline" data="fade-up">{{ title }}</span>
+      <h1 class="copy_intro page_title" data-animate="fade-up" data-delay="0.2">{{ title }}</h1>
 
-      <p class="copy_intro" data="fade-up delay">Top Ausstattung: Top Behandlung</p>
+      <p class="copy" data-animate="fade-up">Top Ausstattung: Top Behandlung.</p>
 
       <p class="ctr">Dank moderner technischer Hilfsmittel sind oftmals schnellere, schonendere und nicht zuletzt erfolgversprechendere Behandlungen möglich. Hier geben wir Ihnen einen Überblick über Ausstattungs-Highlights unserer Praxis:</p>
 
@@ -36,27 +38,27 @@ metaImage: 1200/ausstattung_hero_01.jpg
     <div class=" svnty">
 
       <ul class="ausstattung_list bullets">
-        <li class="h6" data="fade-up">
+        <li class="h6" data-animate="fade-up">
           Digitales und strahlungsarmes Rötgen
         </li>
 
-        <li class="h6" data="fade-up">
+        <li class="h6" data-animate="fade-up">
           Pulverstrahlgeräte in der Prophylaxe mit warmen Wasser
         </li>
 
-        <li class="h6" data="fade-up">
+        <li class="h6" data-animate="fade-up">
           Lachgas
         </li>
 
-        <li class="h6" data="fade-up">
+        <li class="h6" data-animate="fade-up">
           Maschinelle und endometrische Wurzelkanalaufbereitung
         </li>
 
-        <li class="h6" data="fade-up">
+        <li class="h6" data-animate="fade-up">
           Arbeiten unter Vergrösserung
         </li>
 
-        <li class="h6" data="fade-up">
+        <li class="h6" data-animate="fade-up">
           Abdruckfreier Zahnersatz mittels Intraoralscanner möglich
         </li>
   
@@ -73,15 +75,15 @@ metaImage: 1200/ausstattung_hero_01.jpg
 
   <div class="wrapper">
 
-    <div class="item_1" data="fade-up">
+    <div class="item_1" data-animate="fade-up">
       <svg class="ww_clock" alt="Questions?">
         <use xlink:href="#ww_clock"></use>
       </svg>
     </div><!-- .item_1 -->
 
     <div class="item_2">
-      <h3 data="fade-up">Jedoch nur das, was Sinn macht ...</h3>
-      <p class="copy" data="fade-up delay">Wir haben stets den Blick auf die Medizintechnik gerichtet, um auch in diesem Bereich auf aktuellem Stand zu bleiben. Sinnvolle Neuerungen führen wir gerne für Sie ein – jedoch nur, wenn diese sich in der Praxis bewährt haben.</p>
+      <h3 data-animate="fade-up">Jedoch nur das, was Sinn macht ...</h3>
+      <p class="copy" data-animate="fade-up" data-delay="0.2">Wir haben stets den Blick auf die Medizintechnik gerichtet, um auch in diesem Bereich auf aktuellem Stand zu bleiben. Sinnvolle Neuerungen führen wir gerne für Sie ein – jedoch nur, wenn diese sich in der Praxis bewährt haben.</p>
     </div><!-- .item_2 -->
 
   </div><!-- .wrapper -->
