@@ -9,6 +9,16 @@ function onReady(callback) {
   callback();
 }
 
+let refreshScrollTriggers = () => {};
+
+function refreshAfterLayoutChange() {
+  requestAnimationFrame(() => {
+    requestAnimationFrame(() => {
+      refreshScrollTriggers();
+    });
+  });
+}
+
 function initScrollUp() {
   const trigger = document.querySelector(".scrollUp");
 
@@ -34,6 +44,7 @@ async function initGsapScrollFeatures() {
   const { default: ScrollTrigger } = await import("gsap/ScrollTrigger");
 
   gsap.registerPlugin(ScrollTrigger);
+  refreshScrollTriggers = () => ScrollTrigger.refresh();
 
   const createRevealTrigger = (target) => {
     const defaults = {
@@ -140,9 +151,11 @@ async function initGsapScrollFeatures() {
     );
   });
 
-  window.addEventListener("load", () => {
-    ScrollTrigger.refresh();
-  }, { once: true });
+  if (document.readyState === "complete") {
+    refreshAfterLayoutChange();
+  } else {
+    window.addEventListener("load", refreshAfterLayoutChange, { once: true });
+  }
 }
 
 function runWhenVisible(selector, callback, options = {}) {
@@ -183,8 +196,12 @@ async function initAccordion() {
   new Accordion(accordions, {
     duration: 400,
     showMultiple: false,
-    ariaEnabled: true
+    ariaEnabled: true,
+    onOpen: refreshAfterLayoutChange,
+    onClose: refreshAfterLayoutChange
   });
+
+  refreshAfterLayoutChange();
 }
 
 async function initSliders() {
